@@ -285,7 +285,7 @@ export const methods = methodDescriptions({
   [MethodId.CONFIRM]: methodDescriptor("ask the user for confirmation", "open!"),
   [MethodId.BROWSE]: methodDescriptor("open the HTML page in the browser", "open!"),
 
-  [MethodId.PAD]: methodDescriptor("padded with", "value", "lengte", "at the end?"),
+  [MethodId.PAD]: methodDescriptor("padded with", "value", "length", "at the end?"),
 
   [MethodId.INDEX]: methodDescriptor("instance index", "which [@=0 ⇒ serial_number | @=1 ⇒ batch_index | @=2 ⇒ instance_id]"),
   [MethodId.GET_STAMP]: methodDescriptor("get timestamp"),
