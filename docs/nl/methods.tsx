@@ -104,7 +104,7 @@ export const methods: MethodDescriptions = {
   [MethodId.CALM]: MethodDescriptor("stop updates met dezelfde waarde", "ondiep?", "https://rxmarbles.com/#distinctUntilChanged"),
   [MethodId.TAKE]: MethodDescriptor("neem enkel eerste updates", "aantal", "http://reactivex.io/documentation/operators/take.html"),
   [MethodId.SKIP]: MethodDescriptor("sla eerste updates over", "aantal", "http://reactivex.io/documentation/operators/skip.html"),
-  [MethodId.BUFFER]: MethodDescriptor("buffer updates", "hoeveel (@<0 ⇒ aantal=-@ | @>0 ⇒ tijdspanne=@seconden), vertraagd?, actief?", "http://reactivex.io/documentation/operators/buffer.html"),
+  [MethodId.BUFFER]: MethodDescriptor("buffer updates", "hoeveel [@<0 ⇒ aantal=-@ | @>0 ⇒ tijdspanne=@seconden], vertraagd?, actief?", "http://reactivex.io/documentation/operators/buffer.html"),
   [MethodId.FILTER]: MethodDescriptor("filter updates", "doorlaten?", "http://reactivex.io/documentation/operators/filter.html"),
   [MethodId.SNAPSHOT]: MethodDescriptor("bij update, neem", "waarde", "http://reactivex.io/documentation/operators/sample.html"),
   [MethodId.ASAP]: MethodDescriptor("zo snel mogelijk", "maximum intra-frame updates"),
@@ -137,10 +137,10 @@ export const methods: MethodDescriptions = {
   },
   [MethodId.INTERSECTION]: MethodDescriptor("doorsnede met", "vorm", "https://nl.wikipedia.org/wiki/Doorsnede_(verzamelingenleer)"),
   [MethodId.EXCLUSION]: MethodDescriptor("uitgesneden met", "vorm", "https://nl.wikipedia.org/wiki/Verzameling_(wiskunde)#Relatief_complement"),
-  [MethodId.PLOT_GRAPH]: MethodDescriptor("grafiek over tijd", "dikte", "afwijking", "maximum #points (@<0 ⇒ ∞)", "https://nl.wikipedia.org/wiki/Grafiek_(wiskunde)"),
+  [MethodId.PLOT_GRAPH]: MethodDescriptor("grafiek over tijd", "dikte", "afwijking", "maximum #points [@<0 ⇒ ∞)", "https://nl.wikipedia.org/wiki/Grafiek_(wiskunde]"),
   [MethodId.CLONE]: MethodDescriptor("gekopieerd", "aantal", "transformatie", "https://nl.wikipedia.org/wiki/Affiene_transformatie"),
   [MethodId.TRANSFORM]: MethodDescriptor("getransformeerd met", "transformatie", "https://nl.wikipedia.org/wiki/Affiene_transformatie"),
-  [MethodId.PLOT_POINTS]: MethodDescriptor("updates over tijd", "dikte", "afwijking", "maximum #points (@<0 ⇒ ∞)", "https://nl.wikipedia.org/wiki/Grafiek_(wiskunde)"),
+  [MethodId.PLOT_POINTS]: MethodDescriptor("updates over tijd", "dikte", "afwijking", "maximum #points [@<0 ⇒ ∞)", "https://nl.wikipedia.org/wiki/Grafiek_(wiskunde]"),
   [MethodId.TRANSPARENTIZE]: MethodDescriptor("doorschijnend", "factor", "https://nl.wikipedia.org/wiki/Alfakanaal"),
   [MethodId.FILLED]: {
     [anyInputKind]: OverloadDescriptor("als vorm", "kleur"),
@@ -148,7 +148,7 @@ export const methods: MethodDescriptions = {
     [PrimitiveKind.String]: OverloadDescriptor("als vorm", "horizontale tekstuitlijning", "verticale tekstuitlijning", "regelafstand"),
   },
   [MethodId.CONTAINS_POINT]: MethodDescriptor("bevat punt?", "punt"),
-  [MethodId.RENDER]: MethodDescriptor("render als bitmap", "breedte (pixels)", "hoogte (pixels)", "geïnterpoleerd?"),
+  [MethodId.RENDER]: MethodDescriptor("render als bitmap", "breedte [pixels]", "hoogte [pixels]", "geïnterpoleerd?"),
   [MethodId.COMPOSE]: MethodDescriptor("compositie", "operator", "voorgrond", "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation"),
 
   /** Vector operators */
@@ -191,7 +191,7 @@ export const methods: MethodDescriptions = {
 
   /** Puzzle methods */
   [MethodId.EXTRA]: MethodDescriptor("extra", "waarde"),
-  [MethodId.PUZZLE]: MethodDescriptor("puzzle", "soort (@=1 ⇒ vaste blokken, @2 ⇒ vrij instellen)"),
+  [MethodId.PUZZLE]: MethodDescriptor("puzzle", "soort [@=1 ⇒ vaste blokken, @2 ⇒ vrij instellen]"),
   [MethodId.OUTLINE]: MethodDescriptor("outlines", "aan?"),
   [MethodId.CORRECT]: MethodDescriptor("corrigeer", "toon?", "foute waarde"),
   [MethodId.PREMADE]: MethodDescriptor("voorgemaakt", "sla over?"),
@@ -199,7 +199,7 @@ export const methods: MethodDescriptions = {
   [MethodId.IGNORE]: MethodDescriptor("genegeerd"),
   [MethodId.CYCLIC]: MethodDescriptor("animatie cyclus", "duurtijd"),
   [MethodId.FEEDBACK]: MethodDescriptor("feedback", "toon?", "initiële waarde", "recursieve verwijzing"),
-  [MethodId.ACTUATOR]: MethodDescriptor("actuator", "welke (@=0 ⇒ uit | @=1 ⇒ oog | @=oor)", "actuator verwijzing"),
+  [MethodId.ACTUATOR]: MethodDescriptor("actuator", "welke [@=0 ⇒ uit | @=1 ⇒ oog | @=oor]", "actuator verwijzing"),
 
   /** Drawing methods */
   [MethodId.MOVE_TO]: MethodDescriptor("beweeg naar", "start punt", "https://www.w3schools.com/tags/canvas_moveto.asp"),
@@ -235,19 +235,19 @@ export const methods: MethodDescriptions = {
   [MethodId.BITMAP_IMAGE]: MethodDescriptor("externe sprite", "URI", "geïnterpoleerd?", "hoogte", "https://nl.wikipedia.org/wiki/Sprite_(computer)"),
   [MethodId.EMPTY_LIST]: MethodDescriptor("lege rij", "type", "https://nl.wikipedia.org/wiki/Array"),
   [MethodId.NUMERIC_RANGE]: MethodDescriptor("getallenrij", "start", "stap", "aantal", "https://nl.wikipedia.org/wiki/Array"),
-  [MethodId.MOUSE_BUTTON]: MethodDescriptor("muis knop tracker", "welke knop (@=0 ⇒ eender)", "ook aanraakscherm?"),
+  [MethodId.MOUSE_BUTTON]: MethodDescriptor("muis knop tracker", "welke knop [@=0 ⇒ eender]", "ook aanraakscherm?"),
   [MethodId.MOUSE_POSITION]: MethodDescriptor("muis positie tracker", "ook zwevend?", "ook aanraakscherm?"),
   [MethodId.TOUCH_TRACKER]: MethodDescriptor("multi-touch tracker"),
   [MethodId.TOUCH_DOWN]: MethodDescriptor("touch down tracker", "welke touch"),
   [MethodId.TOUCH_POSITION]: MethodDescriptor("touch positie tracker", "welke touch"),
-  [MethodId.KEY_TRACKER]: MethodDescriptor("toetsenbord aanslag tracker (enkel in volledige scherm modus)", "code", "debug", "https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code#try_it_out"),
+  [MethodId.KEY_TRACKER]: MethodDescriptor("toetsenbord aanslag tracker [enkel in volledige scherm modus]", "code", "debug", "https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code#try_it_out"),
   [MethodId.UNIQUE_ID]: MethodDescriptor("unieke code"),
   [MethodId.SOUND_STREAM]: MethodDescriptor("gestreamd geluids bestand", "getal of URI"),
   [MethodId.SOUND_BUFFER]: MethodDescriptor("gebufferd geluids bestand", "getal of URI"),
   [MethodId.PIXELS_PER_UNIT]: MethodDescriptor("screen pixels per ViKiD unit"),
   // [MethodId.NEW_MICROPHONE]: MethodDescriptor("microfoon geluidsbron"),
   [MethodId.EMPTY_SET]: MethodDescriptor("lege verzameling", "type", "https://nl.wikipedia.org/wiki/Verzameling_(wiskunde)"),
-  [MethodId.EMPTY_MAP]: MethodDescriptor("lege map (associatieve array)", "type", "https://nl.wikipedia.org/wiki/Associatieve_array"),
+  [MethodId.EMPTY_MAP]: MethodDescriptor("lege map [associatieve array]", "type", "https://nl.wikipedia.org/wiki/Associatieve_array"),
 
   /** List methods */
   [MethodId.APPEND]: MethodDescriptor("toegevoegd", "element", "https://nl.wikipedia.org/wiki/Array"),
@@ -264,13 +264,13 @@ export const methods: MethodDescriptions = {
   [MethodId.SUM]: MethodDescriptor("sommatie", "nul als leeg?", "https://nl.wikipedia.org/wiki/Sommatie"),
   [MethodId.PRODUCT]: MethodDescriptor("product", "één als leeg?", "https://nl.wikipedia.org/wiki/Vermenigvuldigen#Notatie_en_terminologie"),
   [MethodId.FLATTEN]: MethodDescriptor("afgevlakt", "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat"),
-  // [MethodId.TRIM]: MethodDescriptor("trim elementen", "welke (@>0 ⇒ met stamp=@ | @≤0 ⇒ zonder stamp=-@)", "update als leeg?"),
+  // [MethodId.TRIM]: MethodDescriptor("trim elementen", "welke [@>0 ⇒ met stamp=@ | @≤0 ⇒ zonder stamp=-@]", "update als leeg?"),
   [MethodId.FILL]: MethodDescriptor("gevuld met", "waarde", "https://nl.wikipedia.org/wiki/Array"),
   [MethodId.ORDER]: MethodDescriptor("indices van geordende elementen", "aflopend?"),
   [MethodId.REPEAT]: MethodDescriptor("herhaald als lijst", "aantal", "https://nl.wikipedia.org/wiki/Array"),
   [MethodId.TO_DRAWING]: MethodDescriptor("als lijntekening", "startpunt", "losse segmenten?", "https://www.html5canvastutorials.com/tutorials/html5-canvas-paths"),
   [MethodId.TO_SET]: MethodDescriptor("als verzameling", "https://nl.wikipedia.org/wiki/Verzameling_(wiskunde)"),
-  [MethodId.TO_MAP]: MethodDescriptor("als map (associatieve array)", "https://nl.wikipedia.org/wiki/Associatieve_array"),
+  [MethodId.TO_MAP]: MethodDescriptor("als map [associatieve array]", "https://nl.wikipedia.org/wiki/Associatieve_array"),
   [MethodId.TRANSPOSE]: MethodDescriptor("getransponeerd", "https://nl.wikipedia.org/wiki/Getransponeerde_matrix"),
 
   [MethodId.PRINT]: {
@@ -281,7 +281,7 @@ export const methods: MethodDescriptions = {
     [PrimitiveKind.Number]: OverloadDescriptor("als tekst", "cijfers na de komma"),
   },
 
-  [MethodId.CASE]: MethodDescriptor("letters", "mode (@<0 ⇒ kleine letters | @>0 ⇒ hoofdletters)", "https://nl.wikipedia.org/wiki/Onderkast"),
+  [MethodId.CASE]: MethodDescriptor("letters", "mode [@<0 ⇒ kleine letters | @>0 ⇒ hoofdletters]", "https://nl.wikipedia.org/wiki/Onderkast"),
   [MethodId.JOIN]: MethodDescriptor("samengevoegd", "scheidingsteken"),
   [MethodId.FORMAT]: MethodDescriptor("formatteer naar tekst", "formaat"),
   [MethodId.PARSE]: MethodDescriptor("ontleed tekst", "formaat", "type"),
@@ -292,7 +292,7 @@ export const methods: MethodDescriptions = {
 
   [MethodId.PAD]: MethodDescriptor("opgevuld met", "waarde", "lengte", "achteraan?"),
 
-  [MethodId.INDEX]: MethodDescriptor("instantie index", "welke (@=0 ⇒ serie_nummer | @=1 ⇒ lot_index  | @=2 ⇒ instantie_id)"),
+  [MethodId.INDEX]: MethodDescriptor("instantie index", "welke [@=0 ⇒ serie_nummer | @=1 ⇒ lot_index  | @=2 ⇒ instantie_id]"),
 
   [MethodId.GET_STAMP]: MethodDescriptor("vraag tijdstempel op"),
   [MethodId.SET_STAMP]: MethodDescriptor("wijzig tijdstempel", "nieuwe tijdstempel"),

@@ -101,7 +101,7 @@ export const methods: MethodDescriptions = {
   [MethodId.CALM]: MethodDescriptor("block updates with same value", "shallow?", "https://rxmarbles.com/#distinctUntilChanged"),
   [MethodId.TAKE]: MethodDescriptor("take updates", "count", "http://reactivex.io/documentation/operators/take.html"),
   [MethodId.SKIP]: MethodDescriptor("skip updates", "count", "http://reactivex.io/documentation/operators/skip.html"),
-  [MethodId.BUFFER]: MethodDescriptor("buffer updates", "amount (@<0 ⇒ count=-@ | @>0 ⇒ duration=@seconds)", "delay?", "active?", "http://reactivex.io/documentation/operators/buffer.html"),
+  [MethodId.BUFFER]: MethodDescriptor("buffer updates", "amount [@<0 ⇒ count=-@ | @>0 ⇒ duration=@seconds]", "delay?", "active?", "http://reactivex.io/documentation/operators/buffer.html"),
   [MethodId.FILTER]: MethodDescriptor("filter updates", "pass through?", "http://reactivex.io/documentation/operators/filter.html"),
   [MethodId.SNAPSHOT]: MethodDescriptor("on update, snapshot of", "value", "http://reactivex.io/documentation/operators/sample.html"),
   [MethodId.ASAP]: MethodDescriptor("as soon as possible", "maximum intra-frame updates"),
@@ -134,10 +134,10 @@ export const methods: MethodDescriptions = {
   },
   [MethodId.INTERSECTION]: MethodDescriptor("intersection with", "graphic", "https://en.wikipedia.org/wiki/Intersection_(set_theory)"),
   [MethodId.EXCLUSION]: MethodDescriptor("subtract", "graphic", "https://en.wikipedia.org/wiki/Complement_(set_theory)#Relative_complement"),
-  [MethodId.PLOT_GRAPH]: MethodDescriptor("plot graph over time", "thickness", "tolerance", "maximum #points (@<0 ⇒ ∞ #points)", "https://en.wikipedia.org/wiki/Graph_of_a_function"),
+  [MethodId.PLOT_GRAPH]: MethodDescriptor("plot graph over time", "thickness", "tolerance", "maximum #points [@<0 ⇒ ∞ #points]", "https://en.wikipedia.org/wiki/Graph_of_a_function"),
   [MethodId.CLONE]: MethodDescriptor("duplicated", "count", "transformation", "https://en.wikipedia.org/wiki/Affine_transformation"),
   [MethodId.TRANSFORM]: MethodDescriptor("transformed with", "transformation", "https://en.wikipedia.org/wiki/Affine_transformation"),
-  [MethodId.PLOT_POINTS]: MethodDescriptor("updates over time", "thickness", "tolerance", "maximum #points (@<0 ⇒ ∞ #points)", "https://en.wikipedia.org/wiki/Graph_of_a_function"),
+  [MethodId.PLOT_POINTS]: MethodDescriptor("updates over time", "thickness", "tolerance", "maximum #points [@<0 ⇒ ∞ #points]", "https://en.wikipedia.org/wiki/Graph_of_a_function"),
   [MethodId.TRANSPARENTIZE]: MethodDescriptor("transparent", "factor", "https://en.wikipedia.org/wiki/Transparency_(graphic)"),
   [MethodId.FILLED]: {
     [anyInputKind]: OverloadDescriptor("as graphic", "color"),
@@ -145,7 +145,7 @@ export const methods: MethodDescriptions = {
     [PrimitiveKind.String]: OverloadDescriptor("as graphic", "horizontal text alignment", "vertical text alignment", "line spacing"),
   },
   [MethodId.CONTAINS_POINT]: MethodDescriptor("contains point?", "point"),
-  [MethodId.RENDER]: MethodDescriptor("render to image", "width (pixels)", "height (pixels)", "interpolated?"),
+  [MethodId.RENDER]: MethodDescriptor("render to image", "width [pixels]", "height [pixels]", "interpolated?"),
   [MethodId.COMPOSE]: MethodDescriptor("compose", "operator", "foreground", "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation"),
 
   /** Vector and matrix operators */
@@ -187,7 +187,7 @@ export const methods: MethodDescriptions = {
 
   /** Puzzle methods */
   [MethodId.EXTRA]: MethodDescriptor("extra", "value"),
-  [MethodId.PUZZLE]: MethodDescriptor("puzzle", "kind (@=1 ⇒ fixed blocks, @2 ⇒ free values)"),
+  [MethodId.PUZZLE]: MethodDescriptor("puzzle", "kind [@=1 ⇒ fixed blocks, @2 ⇒ free values]"),
   [MethodId.OUTLINE]: MethodDescriptor("outlines", "enabled?"),
   [MethodId.CORRECT]: MethodDescriptor("correct", "preview?", "wrong value"),
   [MethodId.PREMADE]: MethodDescriptor("pre-made", "skip?"),
@@ -195,7 +195,7 @@ export const methods: MethodDescriptions = {
   [MethodId.IGNORE]: MethodDescriptor("ignored"),
   [MethodId.CYCLIC]: MethodDescriptor("animation cycle", "duration"),
   [MethodId.FEEDBACK]: MethodDescriptor("feedback", "preview?", "initial value", "recursive reference"),
-  [MethodId.ACTUATOR]: MethodDescriptor("actuator", "which (@=0 ⇒ off | @=1 ⇒ eye | @=2 ⇒ ear)", "actuator reference"),
+  [MethodId.ACTUATOR]: MethodDescriptor("actuator", "which [@=0 ⇒ off | @=1 ⇒ eye | @=2 ⇒ ear]", "actuator reference"),
 
   /** Drawing methods */
   [MethodId.MOVE_TO]: MethodDescriptor("move to", "start point", "https://www.w3schools.com/tags/canvas_moveto.asp"),
@@ -231,14 +231,14 @@ export const methods: MethodDescriptions = {
   [MethodId.BITMAP_IMAGE]: MethodDescriptor("external sprite", "URI", "interpolated?", "height", "https://en.wikipedia.org/wiki/Sprite_(computer_graphics)"),
   [MethodId.EMPTY_LIST]: MethodDescriptor("empty array", "type", "https://en.wikipedia.org/wiki/Array_data_structure"),
   [MethodId.EMPTY_SET]: MethodDescriptor("empty set", "type", "https://en.wikipedia.org/wiki/Set_(mathematics)"),
-  [MethodId.EMPTY_MAP]: MethodDescriptor("empty map (associative array)", "key type", "value type", "https://en.wikipedia.org/wiki/Associative_array"),
+  [MethodId.EMPTY_MAP]: MethodDescriptor("empty map [associative array]", "key type", "value type", "https://en.wikipedia.org/wiki/Associative_array"),
   [MethodId.NUMERIC_RANGE]: MethodDescriptor("numeric range", "start", "step", "count", "https://en.wikipedia.org/wiki/Array_data_structure"),
-  [MethodId.MOUSE_BUTTON]: MethodDescriptor("mouse down tracker", "which button (@=0 ⇒ any)", "support touch?"),
+  [MethodId.MOUSE_BUTTON]: MethodDescriptor("mouse down tracker", "which button [@=0 ⇒ any]", "support touch?"),
   [MethodId.MOUSE_POSITION]: MethodDescriptor("mouse position tracker", "allow hover?", "support touch?"),
   [MethodId.TOUCH_TRACKER]: MethodDescriptor("multi touch tracker"),
   [MethodId.TOUCH_DOWN]: MethodDescriptor("touch down tracker", "which touch"),
   [MethodId.TOUCH_POSITION]: MethodDescriptor("touch position tracker", "which touch"),
-  [MethodId.KEY_TRACKER]: MethodDescriptor("keyboard press tracker (full view only)", "code", "debug", "https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code#try_it_out"),
+  [MethodId.KEY_TRACKER]: MethodDescriptor("keyboard press tracker [full view only]", "code", "debug", "https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code#try_it_out"),
   [MethodId.UNIQUE_ID]: MethodDescriptor("unique code"),
   [MethodId.SOUND_STREAM]: MethodDescriptor("sound file stream", "id or URI"),
   [MethodId.SOUND_BUFFER]: MethodDescriptor("sound file buffer", "id or URI"),
@@ -260,13 +260,13 @@ export const methods: MethodDescriptions = {
   [MethodId.SUM]: MethodDescriptor("sum", "zero if empty?", "https://simple.wikipedia.org/wiki/Sum"),
   [MethodId.PRODUCT]: MethodDescriptor("product", "one if empty?", "https://simple.wikipedia.org/wiki/Product_(mathematics)"),
   [MethodId.FLATTEN]: MethodDescriptor("flatten", "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat"),
-  // [MethodId.TRIM]: MethodDescriptor("trim elements", "which (@>0 ⇒ without stamp=@ | @≤0 ⇒ with stamp=-@)", "update when empty?"),
+  // [MethodId.TRIM]: MethodDescriptor("trim elements", "which [@>0 ⇒ without stamp=@ | @≤0 ⇒ with stamp=-@]", "update when empty?"),
   [MethodId.FILL]: MethodDescriptor("filled with", "value", "https://en.wikipedia.org/wiki/Array_data_structure"),
   [MethodId.ORDER]: MethodDescriptor("indices of ordered elements", "descending?"),
   [MethodId.REPEAT]: MethodDescriptor("repeated as list", "count", "https://en.wikipedia.org/wiki/Array_data_structure"),
   [MethodId.TO_DRAWING]: MethodDescriptor("as line drawing", "starting point", "separate segments?", "https://www.html5canvastutorials.com/tutorials/html5-canvas-paths"),
   [MethodId.TO_SET]: MethodDescriptor("as set", "https://en.wikipedia.org/wiki/Set_(mathematics)"),
-  [MethodId.TO_MAP]: MethodDescriptor("as map (associative array)", "https://en.wikipedia.org/wiki/Associative_array"),
+  [MethodId.TO_MAP]: MethodDescriptor("as map [associative array]", "https://en.wikipedia.org/wiki/Associative_array"),
   [MethodId.TRANSPOSE]: MethodDescriptor("transposed", "https://en.wikipedia.org/wiki/Transpose"),
 
   [MethodId.PRINT]: {
@@ -276,7 +276,7 @@ export const methods: MethodDescriptions = {
     [anyInputKind]: OverloadDescriptor("as text"),
   },
 
-  [MethodId.CASE]: MethodDescriptor("letter case", "mode (@<0 ⇒ lowercase | @>0 ⇒ uppercase)", "https://en.wikipedia.org/wiki/Letter_case"),
+  [MethodId.CASE]: MethodDescriptor("letter case", "mode [@<0 ⇒ lowercase | @>0 ⇒ uppercase]", "https://en.wikipedia.org/wiki/Letter_case"),
   [MethodId.JOIN]: MethodDescriptor("join text", "separator"),
   [MethodId.FORMAT]: MethodDescriptor("format to text", "format"),
   [MethodId.PARSE]: MethodDescriptor("parse from text", "formaat", "type"),
@@ -287,7 +287,7 @@ export const methods: MethodDescriptions = {
 
   [MethodId.PAD]: MethodDescriptor("padded with", "value", "lengte", "at the end?"),
 
-  [MethodId.INDEX]: MethodDescriptor("instance index", "which (@=0 ⇒ serial_number | @=1 ⇒ batch_index | @=2 ⇒ instance_id)"),
+  [MethodId.INDEX]: MethodDescriptor("instance index", "which [@=0 ⇒ serial_number | @=1 ⇒ batch_index | @=2 ⇒ instance_id]"),
   [MethodId.GET_STAMP]: MethodDescriptor("get timestamp"),
   [MethodId.SET_STAMP]: MethodDescriptor("set timestamp", "new timestamp"),
 
