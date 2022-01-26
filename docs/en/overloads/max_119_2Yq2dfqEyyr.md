@@ -1,9 +1,12 @@
 # Signature
 ```vikid-signature
-input;number;output
 ```
 
 # Synopsis
-largest
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, number, output
+
+[more...](number)

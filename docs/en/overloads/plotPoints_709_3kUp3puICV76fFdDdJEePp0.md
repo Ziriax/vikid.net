@@ -1,11 +1,12 @@
 # Signature
 ```vikid-signature
-input;thickness;tolerance;maximum #points (@<0 ⇒ ∞ #points);output
 ```
 
 # Synopsis
-updates over time
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, thickness, tolerance, maximum #points , output
 
 [more...](https://en.wikipedia.org/wiki/Graph_of_a_function)

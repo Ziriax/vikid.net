@@ -312,8 +312,11 @@ export const nl: Translations = {
   cyclic_reference: "😕 Een link naar deze formule zou een oneindige lus maken!",
   cyclic_reference_warning: (cycle: Let[]) => `⚠️ Een link naar deze formule zou een oneindige lus maken!\n\n${cycle.map(b => b.label).join("→")}\n\n🛈 Gebruik bvb de functie 'combineren' om een lus te maken.\n🛈 Druk lang om een link te maken vertraagd met één update.`,
 
+  signature_output: "uitvoer",
   signature_input: "invoer",
   signature_make: "maak",
+  signature: "Signatuur",
+  synopsis: "Synopsis",
 
   more_script_tools: "Meer...",
 

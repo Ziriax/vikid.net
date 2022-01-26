@@ -1,9 +1,12 @@
 # Signature
 ```vikid-signature
-input;empty?;asap;output
 ```
 
 # Synopsis
-receive messages
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, empty?, asap, output
+
+[more...](asap)

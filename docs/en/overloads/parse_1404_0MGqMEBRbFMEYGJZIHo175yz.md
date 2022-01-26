@@ -1,9 +1,12 @@
 # Signature
 ```vikid-signature
-input;formaat;type;output
 ```
 
 # Synopsis
-parse from text
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, formaat, type, output
+
+[more...](type)

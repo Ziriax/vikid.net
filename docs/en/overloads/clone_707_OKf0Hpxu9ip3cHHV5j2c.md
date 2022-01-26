@@ -1,11 +1,12 @@
 # Signature
 ```vikid-signature
-input;count;transformation;output
 ```
 
 # Synopsis
-duplicated
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, count, transformation, output
 
 [more...](https://en.wikipedia.org/wiki/Affine_transformation)

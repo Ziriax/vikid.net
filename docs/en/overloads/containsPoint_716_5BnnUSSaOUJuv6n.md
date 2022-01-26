@@ -1,9 +1,12 @@
 # Signature
 ```vikid-signature
-input;point;output
 ```
 
 # Synopsis
-contains point?
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, point, output
+
+[more...](point)

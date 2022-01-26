@@ -1,11 +1,12 @@
 # Signature
 ```vikid-signature
-input;code;debug;output
 ```
 
 # Synopsis
-keyboard press tracker (full view only)
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters make, code, debug, output
 
 [more...](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code#try_it_out)

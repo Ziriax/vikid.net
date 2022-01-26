@@ -1,11 +1,12 @@
 # Signature
 ```vikid-signature
-input;start point;end point;output
 ```
 
 # Synopsis
-line segment
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters make, start point, end point, output
 
 [more...](https://en.wikipedia.org/wiki/Line_segment)

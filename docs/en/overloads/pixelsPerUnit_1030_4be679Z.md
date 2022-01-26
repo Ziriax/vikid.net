@@ -1,9 +1,10 @@
 # Signature
 ```vikid-signature
-input;output
 ```
 
 # Synopsis
-screen pixels per ViKiD unit
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters make, output

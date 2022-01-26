@@ -1,11 +1,12 @@
 # Signature
 ```vikid-signature
-input;width;height;corner rounding;center point;output
 ```
 
 # Synopsis
-rectangle
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters make, width, height, corner rounding, center point, output
 
 [more...](https://en.wikipedia.org/wiki/Rectangle)

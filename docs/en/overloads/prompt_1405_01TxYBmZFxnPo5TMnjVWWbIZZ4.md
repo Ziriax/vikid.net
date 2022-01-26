@@ -1,9 +1,12 @@
 # Signature
 ```vikid-signature
-input;default input;open!;output
 ```
 
 # Synopsis
-ask the user for text input
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, default input, open!, output
+
+[more...](open!)

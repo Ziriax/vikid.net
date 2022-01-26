@@ -1,11 +1,12 @@
 # Signature
 ```vikid-signature
-input;output
 ```
 
 # Synopsis
-reversed
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, output
 
 [more...](https://en.wikipedia.org/wiki/Array_data_structure)

@@ -1,9 +1,12 @@
 # Signature
 ```vikid-signature
-input;horizontal text alignment;vertical text alignment;line spacing;output
 ```
 
 # Synopsis
-as graphic
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, horizontal text alignment, vertical text alignment, line spacing, output
+
+[more...](line spacing)

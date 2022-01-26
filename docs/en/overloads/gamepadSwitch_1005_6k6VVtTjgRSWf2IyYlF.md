@@ -1,11 +1,12 @@
 # Signature
 ```vikid-signature
-input;switch id;gamepad id;output
 ```
 
 # Synopsis
-gamepad switch
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters make, switch id, gamepad id, output
 
 [more...](https://www.w3.org/TR/gamepad/#fig-visual-representation-of-a-standard-gamepad-layout)

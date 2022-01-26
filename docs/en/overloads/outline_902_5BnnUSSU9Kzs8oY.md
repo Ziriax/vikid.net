@@ -1,9 +1,12 @@
 # Signature
 ```vikid-signature
-input;enabled?;output
 ```
 
 # Synopsis
-outlines
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, enabled?, output
+
+[more...](enabled?)

@@ -1,9 +1,12 @@
 # Signature
 ```vikid-signature
-input;thickness;output
 ```
 
 # Synopsis
-as graphic
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, thickness, output
+
+[more...](thickness)

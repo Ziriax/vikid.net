@@ -1,11 +1,12 @@
 # Signature
 ```vikid-signature
-input;hours;output
 ```
 
 # Synopsis
-rotated
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, hours, output
 
 [more...](https://en.wikipedia.org/wiki/Rotation_(mathematics))

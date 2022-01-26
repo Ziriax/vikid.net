@@ -1,11 +1,12 @@
 # Signature
 ```vikid-signature
-input;index;count;output
 ```
 
 # Synopsis
-removed
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, index, count, output
 
 [more...](https://en.wikipedia.org/wiki/Array_data_structure)

@@ -1,11 +1,12 @@
 # Signature
 ```vikid-signature
-input;start;step;count;output
 ```
 
 # Synopsis
-numeric range
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters make, start, step, count, output
 
 [more...](https://en.wikipedia.org/wiki/Array_data_structure)

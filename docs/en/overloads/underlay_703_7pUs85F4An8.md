@@ -1,9 +1,10 @@
 # Signature
 ```vikid-signature
-input;output
 ```
 
 # Synopsis
-stacked one below the other
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, output

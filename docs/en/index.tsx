@@ -295,6 +295,9 @@ export const en = {
   cyclic_reference: `😕 Linking to this formula would create an infinite loop!`,
   cyclic_reference_warning: (cycle: Let[]) => `⚠️ Linking to this formula would create an infinite loop!\n\n${cycle.map(b => b.label).join("→")}\n\n🛈 Use e.g. the 'merge' function to create loops.\n🛈 Long-press to create a reference delayed by a single update.`,
 
+  signature: "Signature",
+  synopsis: "Synopsis",
+  signature_output: "output",
   signature_input: "input",
   signature_make: "make",
 

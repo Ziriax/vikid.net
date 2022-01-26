@@ -1,9 +1,12 @@
 # Signature
 ```vikid-signature
-input;skip?;output
 ```
 
 # Synopsis
-pre-made
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, skip?, output
+
+[more...](skip?)

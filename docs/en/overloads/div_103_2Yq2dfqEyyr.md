@@ -1,11 +1,12 @@
 # Signature
 ```vikid-signature
-input;divisor;output
 ```
 
 # Synopsis
-divided by
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, divisor, output
 
 [more...](https://en.wikipedia.org/wiki/Division_(mathematics))

@@ -1,11 +1,12 @@
 # Signature
 ```vikid-signature
-input;output
 ```
 
 # Synopsis
-as map (associative array)
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, output
 
 [more...](https://en.wikipedia.org/wiki/Associative_array)

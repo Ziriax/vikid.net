@@ -1,11 +1,12 @@
 # Signature
 ```vikid-signature
-input;active?;output
 ```
 
 # Synopsis
-cull
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, active?, output
 
 [more...](https://en.wikipedia.org/wiki/Hidden-surface_determination#Viewing-frustum_culling)

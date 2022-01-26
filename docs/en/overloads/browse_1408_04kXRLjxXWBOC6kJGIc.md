@@ -1,9 +1,12 @@
 # Signature
 ```vikid-signature
-input;open!;output
 ```
 
 # Synopsis
-open the HTML page in the browser
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, open!, output
+
+[more...](open!)

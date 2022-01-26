@@ -1,11 +1,12 @@
 # Signature
 ```vikid-signature
-input;updates;output
 ```
 
 # Synopsis
-initialize and merge with
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, updates, output
 
 [more...](http://reactivex.io/documentation/operators/merge.html)

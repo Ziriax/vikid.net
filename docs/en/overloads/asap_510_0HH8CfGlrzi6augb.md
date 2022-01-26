@@ -1,9 +1,12 @@
 # Signature
 ```vikid-signature
-input;maximum intra-frame updates;output
 ```
 
 # Synopsis
-as soon as possible
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, maximum intra-frame updates, output
+
+[more...](maximum intra-frame updates)

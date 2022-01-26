@@ -1,11 +1,12 @@
 # Signature
 ```vikid-signature
-input;direction;output
 ```
 
 # Synopsis
-reflected across
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, direction, output
 
 [more...](https://en.wikipedia.org/wiki/Reflection_(mathematics))

@@ -1,9 +1,12 @@
 # Signature
 ```vikid-signature
-input;which (@=0 ⇒ off | @=1 ⇒ eye | @=2 ⇒ ear);actuator reference;output
 ```
 
 # Synopsis
-actuator
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, which , actuator reference, output
+
+[more...](actuator reference)

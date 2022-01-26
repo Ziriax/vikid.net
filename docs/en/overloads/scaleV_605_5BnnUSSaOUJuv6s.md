@@ -1,11 +1,12 @@
 # Signature
 ```vikid-signature
-input;factors;output
 ```
 
 # Synopsis
-scaled
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, factors, output
 
 [more...](https://en.wikipedia.org/wiki/Scaling_(geometry))

@@ -1,9 +1,12 @@
 # Signature
 ```vikid-signature
-input;separator;output
 ```
 
 # Synopsis
-join text
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, separator, output
+
+[more...](separator)

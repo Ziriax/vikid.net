@@ -1,9 +1,12 @@
 # Signature
 ```vikid-signature
-input;width (pixels);height (pixels);interpolated?;output
 ```
 
 # Synopsis
-render to image
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, width , height , interpolated?, output
+
+[more...](interpolated?)

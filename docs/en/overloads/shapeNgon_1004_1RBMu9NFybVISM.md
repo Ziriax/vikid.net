@@ -1,11 +1,12 @@
 # Signature
 ```vikid-signature
-input;corner count;output
 ```
 
 # Synopsis
-regular polygon
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters make, corner count, output
 
 [more...](https://en.wikipedia.org/wiki/Regular_polygon)

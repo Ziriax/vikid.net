@@ -1,11 +1,12 @@
 # Signature
 ```vikid-signature
-input;x coordinate;y coordinate;w coordinate;output
 ```
 
 # Synopsis
-point or vector
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, x coordinate, y coordinate, w coordinate, output
 
 [more...](https://www.tomdalling.com/blog/modern-opengl/explaining-homogenous-coordinates-and-projective-geometry/)

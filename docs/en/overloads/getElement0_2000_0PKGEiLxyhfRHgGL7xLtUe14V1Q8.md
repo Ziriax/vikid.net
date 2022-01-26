@@ -1,11 +1,12 @@
 # Signature
 ```vikid-signature
-input;output
 ```
 
 # Synopsis
-get element 0
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, output
 
 [more...](https://en.wikipedia.org/wiki/Tuple)

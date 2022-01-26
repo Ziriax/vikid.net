@@ -1,11 +1,12 @@
 # Signature
 ```vikid-signature
-input;vector;output
 ```
 
 # Synopsis
-plus
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, vector, output
 
 [more...](https://en.wikipedia.org/wiki/Euclidean_vector#Addition_and_subtraction)

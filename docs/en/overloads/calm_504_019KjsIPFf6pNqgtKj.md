@@ -1,11 +1,12 @@
 # Signature
 ```vikid-signature
-input;shallow?;output
 ```
 
 # Synopsis
-block updates with same value
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, shallow?, output
 
 [more...](https://rxmarbles.com/#distinctUntilChanged)

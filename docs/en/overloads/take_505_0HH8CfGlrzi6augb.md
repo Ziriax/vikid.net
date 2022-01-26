@@ -1,11 +1,12 @@
 # Signature
 ```vikid-signature
-input;count;output
 ```
 
 # Synopsis
-take updates
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, count, output
 
 [more...](http://reactivex.io/documentation/operators/take.html)

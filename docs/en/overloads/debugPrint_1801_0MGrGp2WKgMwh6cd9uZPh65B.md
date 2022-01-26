@@ -1,9 +1,12 @@
 # Signature
 ```vikid-signature
-input;prefix;active?;output
 ```
 
 # Synopsis
-print to debug console
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, prefix, active?, output
+
+[more...](active?)

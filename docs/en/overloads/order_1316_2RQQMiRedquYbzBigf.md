@@ -1,9 +1,12 @@
 # Signature
 ```vikid-signature
-input;descending?;output
 ```
 
 # Synopsis
-indices of ordered elements
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, descending?, output
+
+[more...](descending?)

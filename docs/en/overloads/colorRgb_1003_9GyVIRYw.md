@@ -1,11 +1,12 @@
 # Signature
 ```vikid-signature
-input;red;green;blue;output
 ```
 
 # Synopsis
-color
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, red, green, blue, output
 
 [more...](https://en.wikipedia.org/wiki/RGB_color_model)

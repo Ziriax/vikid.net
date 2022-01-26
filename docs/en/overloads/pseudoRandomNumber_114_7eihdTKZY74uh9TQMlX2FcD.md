@@ -1,11 +1,12 @@
 # Signature
 ```vikid-signature
-input;from;to;seed;output
 ```
 
 # Synopsis
-seeded number
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters make, from, to, seed, output
 
 [more...](https://en.wikipedia.org/wiki/Random_number_generation)

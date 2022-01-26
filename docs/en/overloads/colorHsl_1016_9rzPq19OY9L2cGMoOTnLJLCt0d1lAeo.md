@@ -1,11 +1,12 @@
 # Signature
 ```vikid-signature
-input;hue;saturation;lightness;perceptual?;output
 ```
 
 # Synopsis
-color
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters make, hue, saturation, lightness, perceptual?, output
 
 [more...](https://en.wikipedia.org/wiki/HSL_and_HSV)

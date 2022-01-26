@@ -1,9 +1,12 @@
 # Signature
 ```vikid-signature
-input;with label;without label;active?;maximum depth;output
 ```
 
 # Synopsis
-hits?
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, with label, without label, active?, maximum depth, output
+
+[more...](maximum depth)

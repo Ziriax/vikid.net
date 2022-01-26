@@ -1,11 +1,12 @@
 # Signature
 ```vikid-signature
-input;boolean;output
 ```
 
 # Synopsis
-and
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, boolean, output
 
 [more...](https://en.wikipedia.org/wiki/Logical_conjunction)

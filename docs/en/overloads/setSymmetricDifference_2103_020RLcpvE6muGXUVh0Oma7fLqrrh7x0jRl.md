@@ -1,11 +1,12 @@
 # Signature
 ```vikid-signature
-input;set;output
 ```
 
 # Synopsis
-symmetric difference with
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, set, output
 
 [more...](https://en.wikipedia.org/wiki/Symmetric_difference)

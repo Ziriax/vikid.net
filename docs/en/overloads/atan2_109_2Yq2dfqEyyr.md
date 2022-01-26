@@ -1,11 +1,12 @@
 # Signature
 ```vikid-signature
-input;x;output
 ```
 
 # Synopsis
-arctangent
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, x, output
 
 [more...](https://en.wikipedia.org/wiki/Atan2)

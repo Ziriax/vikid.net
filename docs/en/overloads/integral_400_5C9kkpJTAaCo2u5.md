@@ -1,11 +1,12 @@
 # Signature
 ```vikid-signature
-input;velocity;output
 ```
 
 # Synopsis
-plus time integral
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, velocity, output
 
 [more...](https://en.wikipedia.org/wiki/Velocity)

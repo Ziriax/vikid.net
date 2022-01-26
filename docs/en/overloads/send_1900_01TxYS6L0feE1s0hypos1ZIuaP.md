@@ -1,9 +1,12 @@
 # Signature
 ```vikid-signature
-input;message;count;output
 ```
 
 # Synopsis
-send
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, message, count, output
+
+[more...](count)

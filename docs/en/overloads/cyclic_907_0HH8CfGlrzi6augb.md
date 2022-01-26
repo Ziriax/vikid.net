@@ -1,9 +1,12 @@
 # Signature
 ```vikid-signature
-input;duration;output
 ```
 
 # Synopsis
-animation cycle
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, duration, output
+
+[more...](duration)

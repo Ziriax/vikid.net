@@ -1,11 +1,12 @@
 # Signature
 ```vikid-signature
-input;mode (@<0 ⇒ lowercase | @>0 ⇒ uppercase);output
 ```
 
 # Synopsis
-letter case
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, mode , output
 
 [more...](https://en.wikipedia.org/wiki/Letter_case)

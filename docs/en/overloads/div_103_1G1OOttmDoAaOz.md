@@ -1,11 +1,12 @@
 # Signature
 ```vikid-signature
-input;factor;output
 ```
 
 # Synopsis
-divided by
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, factor, output
 
 [more...](https://en.wikipedia.org/wiki/Euclidean_vector#Scalar_multiplication)

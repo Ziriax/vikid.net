@@ -1,11 +1,12 @@
 # Signature
 ```vikid-signature
-input;graphic;output
 ```
 
 # Synopsis
-intersection with
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, graphic, output
 
 [more...](https://en.wikipedia.org/wiki/Intersection_(set_theory))

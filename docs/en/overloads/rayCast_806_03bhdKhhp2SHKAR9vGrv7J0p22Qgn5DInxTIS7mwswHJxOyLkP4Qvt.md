@@ -1,9 +1,12 @@
 # Signature
 ```vikid-signature
-input;data type;with label;without label;active?;output
 ```
 
 # Synopsis
-data hits
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, data type, with label, without label, active?, output
+
+[more...](active?)

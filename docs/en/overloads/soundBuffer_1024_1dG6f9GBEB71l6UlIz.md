@@ -1,9 +1,12 @@
 # Signature
 ```vikid-signature
-input;id or URI;output
 ```
 
 # Synopsis
-sound file buffer
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters make, id or URI, output
+
+[more...](id or URI)

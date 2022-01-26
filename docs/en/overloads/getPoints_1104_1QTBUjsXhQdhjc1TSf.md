@@ -1,9 +1,12 @@
 # Signature
 ```vikid-signature
-input;corners only?;output
 ```
 
 # Synopsis
-list of points
+```vikid-synopsis
+```
 
 # Description
+TODO: Explain the function overload and parameters input, corners only?, output
+
+[more...](corners only?)
