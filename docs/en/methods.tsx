@@ -1,342 +1,720 @@
 import { MethodId, AdjusterMethodId, ReceiverMethodId } from "language";
-import { methodDescriptions, methodDescriptor, adjusterDescriptor, overloadDescriptor } from "locale/MethodDescription";
+import { methodDescriptions, adjusterDescription, overloadDescription } from "locale/MethodDescription";
 
 export const methods = methodDescriptions({
-  [AdjusterMethodId.Instance]: adjusterDescriptor("one adjusted instance", "…adjustments"),
-  [AdjusterMethodId.Population]: adjusterDescriptor("multiple adjusted instances", "…adjustments", "initial amount", "spawn amount", "active?"),
-  [AdjusterMethodId.Switcher]: adjusterDescriptor("switched adjusted instance", "…adjustments", "active?", "time scale"),
-  [AdjusterMethodId.Simulator]: adjusterDescriptor("looping adjusted instance", "…adjustments", "active?", "time step"),
+  [AdjusterMethodId.Instance]: adjusterDescription("one adjusted instance", "…adjustments"),
+  [AdjusterMethodId.Population]: adjusterDescription("multiple adjusted instances", "…adjustments", "initial amount", "spawn amount", "active?"),
+  [AdjusterMethodId.Switcher]: adjusterDescription("switched adjusted instance", "…adjustments", "active?", "time scale"),
+  [AdjusterMethodId.Simulator]: adjusterDescription("looping adjusted instance", "…adjustments", "active?", "time step"),
 
-  [ReceiverMethodId.Track]: methodDescriptor("receive message", "track"),
+  [ReceiverMethodId.Track]: {
+    _: overloadDescription("receive message", "track")
+  },
 
   [MethodId.ADD]: {
-    "𝕍": overloadDescriptor("plus", "vector", "https://en.wikipedia.org/wiki/Euclidean_vector#Addition_and_subtraction"),
-    _: overloadDescriptor("plus", "value", "https://en.wikipedia.org/wiki/Addition"),
+    "𝕍": overloadDescription("plus", "vector", "https://en.wikipedia.org/wiki/Euclidean_vector#Addition_and_subtraction"),
+    _: overloadDescription("plus", "value", "https://en.wikipedia.org/wiki/Addition"),
   },
   [MethodId.SUB]: {
-    "𝕍": overloadDescriptor("minus", "vector", "https://en.wikipedia.org/wiki/Euclidean_vector#Addition_and_subtraction"),
-    _: overloadDescriptor("minus", "value", "https://en.wikipedia.org/wiki/Subtraction"),
+    "𝕍": overloadDescription("minus", "vector", "https://en.wikipedia.org/wiki/Euclidean_vector#Addition_and_subtraction"),
+    _: overloadDescription("minus", "value", "https://en.wikipedia.org/wiki/Subtraction"),
   },
   [MethodId.MUL]: {
-    "ℝ": overloadDescriptor("times", "factor", "https://en.wikipedia.org/wiki/Multiplication"),
-    "𝕍": overloadDescriptor("times", "factor", "https://en.wikipedia.org/wiki/Euclidean_vector#Scalar_multiplication"),
-    "𝕋": overloadDescriptor("combined with", "transformation", "https://en.wikipedia.org/wiki/Affine_transformation"),
+    "ℝ": overloadDescription("times", "factor", "https://en.wikipedia.org/wiki/Multiplication"),
+    "𝕍": overloadDescription("times", "factor", "https://en.wikipedia.org/wiki/Euclidean_vector#Scalar_multiplication"),
+    "𝕋": overloadDescription("combined with", "transformation", "https://en.wikipedia.org/wiki/Affine_transformation"),
   },
   [MethodId.DIV]: {
-    "ℝ": overloadDescriptor("divided by", "divisor", "https://en.wikipedia.org/wiki/Division_(mathematics)"),
-    "𝕍": overloadDescriptor("divided by", "factor", "https://en.wikipedia.org/wiki/Euclidean_vector#Scalar_multiplication"),
+    "ℝ": overloadDescription("divided by", "divisor", "https://en.wikipedia.org/wiki/Division_(mathematics)"),
+    "𝕍": overloadDescription("divided by", "factor", "https://en.wikipedia.org/wiki/Euclidean_vector#Scalar_multiplication"),
   },
   [MethodId.NEG]: {
-    "ℝ": overloadDescriptor("negation", "https://en.wikipedia.org/wiki/Additive_inverse"),
-    "𝕍": overloadDescriptor("negation", "https://en.wikipedia.org/wiki/Euclidean_vector#Scalar_multiplication"),
+    "ℝ": overloadDescription("negation", "https://en.wikipedia.org/wiki/Additive_inverse"),
+    "𝕍": overloadDescription("negation", "https://en.wikipedia.org/wiki/Euclidean_vector#Scalar_multiplication"),
   },
   [MethodId.INVERT]: {
-    "ℝ": overloadDescriptor("inverse", "https://en.wikipedia.org/wiki/Multiplicative_inverse"),
-    "𝕋": overloadDescriptor("inverse", "https://en.wikipedia.org/wiki/Invertible_matrix"),
-    "𝕂": overloadDescriptor("inverse", "https://en.wikipedia.org/wiki/Complementary_colors"),
-    "𝔾": overloadDescriptor("inverse", "https://en.wikipedia.org/wiki/Complement_(set_theory)"),
+    "ℝ": overloadDescription("inverse", "https://en.wikipedia.org/wiki/Multiplicative_inverse"),
+    "𝕋": overloadDescription("inverse", "https://en.wikipedia.org/wiki/Invertible_matrix"),
+    "𝕂": overloadDescription("inverse", "https://en.wikipedia.org/wiki/Complementary_colors"),
+    "𝔾": overloadDescription("inverse", "https://en.wikipedia.org/wiki/Complement_(set_theory)"),
   },
-  [MethodId.MOD]: methodDescriptor("positive remainder", "divisor", "https://en.wikipedia.org/wiki/Remainder"),
-  [MethodId.SIN]: methodDescriptor("sine", "https://en.wikipedia.org/wiki/Trigonometric_functions"),
-  [MethodId.COS]: methodDescriptor("cosine", "https://en.wikipedia.org/wiki/Trigonometric_functions"),
-  [MethodId.TAN]: methodDescriptor("tangent", "https://en.wikipedia.org/wiki/Trigonometric_functions"),
-  [MethodId.ASIN]: methodDescriptor("arcsine", "https://en.wikipedia.org/wiki/Inverse_trigonometric_functions"),
-  [MethodId.ACOS]: methodDescriptor("arccosine", "https://en.wikipedia.org/wiki/Inverse_trigonometric_functions"),
-  [MethodId.ATAN2]: methodDescriptor("arctangent", "x", "https://en.wikipedia.org/wiki/Atan2"),
+  [MethodId.MOD]: {
+    _: overloadDescription("positive remainder", "divisor", "https://en.wikipedia.org/wiki/Remainder")
+  },
+  [MethodId.SIN]: {
+    _: overloadDescription("sine", "https://en.wikipedia.org/wiki/Trigonometric_functions")
+  },
+  [MethodId.COS]: {
+    _: overloadDescription("cosine", "https://en.wikipedia.org/wiki/Trigonometric_functions")
+  },
+  [MethodId.TAN]: {
+    _: overloadDescription("tangent", "https://en.wikipedia.org/wiki/Trigonometric_functions")
+  },
+  [MethodId.ASIN]: {
+    _: overloadDescription("arcsine", "https://en.wikipedia.org/wiki/Inverse_trigonometric_functions")
+  },
+  [MethodId.ACOS]: {
+    _: overloadDescription("arccosine", "https://en.wikipedia.org/wiki/Inverse_trigonometric_functions")
+  },
+  [MethodId.ATAN2]: {
+    _: overloadDescription("arctangent", "x", "https://en.wikipedia.org/wiki/Atan2")
+  },
   [MethodId.ABS]: {
-    "ℝ": overloadDescriptor("absolute value", "https://en.wikipedia.org/wiki/Absolute_value"),
-    "𝕍": overloadDescriptor("length", "https://en.wikipedia.org/wiki/Norm_(mathematics)#Euclidean_norm"),
+    "ℝ": overloadDescription("absolute value", "https://en.wikipedia.org/wiki/Absolute_value"),
+    "𝕍": overloadDescription("length", "https://en.wikipedia.org/wiki/Norm_(mathematics)#Euclidean_norm"),
   },
-  [MethodId.EXP]: methodDescriptor("exponential function", "https://en.wikipedia.org/wiki/Exponential_function"),
-  [MethodId.LOG]: methodDescriptor("natural_logarithm", "https://en.wikipedia.org/wiki/Natural_logarithm"),
-  [MethodId.POW]: methodDescriptor("to the power", "number", "https://en.wikipedia.org/wiki/Exponentiation"),
-  [MethodId.RANDOM_NUMBER]: methodDescriptor("random number", "from", "to", "https://en.wikipedia.org/wiki/Random_number_generation"),
-  [MethodId.PSEUDO_RANDOM_NUMBER]: methodDescriptor("seeded number", "from", "to", "seed", "https://en.wikipedia.org/wiki/Random_number_generation"),
-  [MethodId.FLOOR]: methodDescriptor("rounded down", "https://en.wikipedia.org/wiki/Rounding"),
-  [MethodId.CEIL]: methodDescriptor("rounded up", "https://en.wikipedia.org/wiki/Rounding"),
-  [MethodId.ROUND]: methodDescriptor("rounded", "https://en.wikipedia.org/wiki/Rounding"),
-  [MethodId.MIN]: methodDescriptor("smallest", "number"),
-  [MethodId.MAX]: methodDescriptor("largest", "number"),
-  [MethodId.LERP]: methodDescriptor("interpolated to", "end", "factor", "https://en.wikipedia.org/wiki/Linear_interpolation#Programming_language_support"),
-  [MethodId.SIGN]: methodDescriptor("sign", "https://en.wikipedia.org/wiki/Sign_(mathematics)"),
-  [MethodId.SQRT]: methodDescriptor("square root", "https://en.wikipedia.org/wiki/SquareRoot"),
+  [MethodId.EXP]: {
+    _: overloadDescription("exponential function", "https://en.wikipedia.org/wiki/Exponential_function")
+  },
+  [MethodId.LOG]: {
+    _: overloadDescription("natural_logarithm", "https://en.wikipedia.org/wiki/Natural_logarithm")
+  },
+  [MethodId.POW]: {
+    _: overloadDescription("to the power", "number", "https://en.wikipedia.org/wiki/Exponentiation")
+  },
+  [MethodId.RANDOM_NUMBER]: {
+    _: overloadDescription("random number", "from", "to", "https://en.wikipedia.org/wiki/Random_number_generation")
+  },
+  [MethodId.PSEUDO_RANDOM_NUMBER]: {
+    _: overloadDescription("seeded number", "from", "to", "seed", "https://en.wikipedia.org/wiki/Random_number_generation")
+  },
+  [MethodId.FLOOR]: {
+    _: overloadDescription("rounded down", "https://en.wikipedia.org/wiki/Rounding")
+  },
+  [MethodId.CEIL]: {
+    _: overloadDescription("rounded up", "https://en.wikipedia.org/wiki/Rounding")
+  },
+  [MethodId.ROUND]: {
+    _: overloadDescription("rounded", "https://en.wikipedia.org/wiki/Rounding")
+  },
+  [MethodId.MIN]: {
+    _: overloadDescription("smallest", "number")
+  },
+  [MethodId.MAX]: {
+    _: overloadDescription("largest", "number")
+  },
+  [MethodId.LERP]: {
+    _: overloadDescription("interpolated to", "end", "factor", "https://en.wikipedia.org/wiki/Linear_interpolation#Programming_language_support")
+  },
+  [MethodId.SIGN]: {
+    _: overloadDescription("sign", "https://en.wikipedia.org/wiki/Sign_(mathematics)")
+  },
+  [MethodId.SQRT]: {
+    _: overloadDescription("square root", "https://en.wikipedia.org/wiki/SquareRoot")
+  },
 
   /** Boolean operators */
-  [MethodId.EQU]: methodDescriptor("is equal to", "value", "https://en.wikipedia.org/wiki/Inequality_(mathematics)"),
-  [MethodId.NEQ]: methodDescriptor("is not equal to", "value", "https://en.wikipedia.org/wiki/Inequality_(mathematics)"),
-  [MethodId.GT]: methodDescriptor("is greater than", "number", "https://en.wikipedia.org/wiki/Inequality_(mathematics)"),
-  [MethodId.GTE]: methodDescriptor("is greater or equal to", "number", "https://en.wikipedia.org/wiki/Inequality_(mathematics)"),
-  [MethodId.LT]: methodDescriptor("is smaller than", "number", "https://en.wikipedia.org/wiki/Inequality_(mathematics)"),
-  [MethodId.LTE]: methodDescriptor("is smaller or equal to", "number", "https://en.wikipedia.org/wiki/Inequality_(mathematics)"),
+  [MethodId.EQU]: {
+    _: overloadDescription("is equal to", "value", "https://en.wikipedia.org/wiki/Inequality_(mathematics)")
+  },
+  [MethodId.NEQ]: {
+    _: overloadDescription("is not equal to", "value", "https://en.wikipedia.org/wiki/Inequality_(mathematics)")
+  },
+  [MethodId.GT]: {
+    _: overloadDescription("is greater than", "number", "https://en.wikipedia.org/wiki/Inequality_(mathematics)")
+  },
+  [MethodId.GTE]: {
+    _: overloadDescription("is greater or equal to", "number", "https://en.wikipedia.org/wiki/Inequality_(mathematics)")
+  },
+  [MethodId.LT]: {
+    _: overloadDescription("is smaller than", "number", "https://en.wikipedia.org/wiki/Inequality_(mathematics)")
+  },
+  [MethodId.LTE]: {
+    _: overloadDescription("is smaller or equal to", "number", "https://en.wikipedia.org/wiki/Inequality_(mathematics)")
+  },
   [MethodId.AND]: {
-    "𝔹": overloadDescriptor("and", "boolean", "https://en.wikipedia.org/wiki/Logical_conjunction"),
-    "ℝ": overloadDescriptor("bitwise AND", "number", "https://en.wikipedia.org/wiki/Bitwise_operation#AND"),
+    "𝔹": overloadDescription("and", "boolean", "https://en.wikipedia.org/wiki/Logical_conjunction"),
+    "ℝ": overloadDescription("bitwise AND", "number", "https://en.wikipedia.org/wiki/Bitwise_operation#AND"),
   },
   [MethodId.OR]: {
-    "𝔹": overloadDescriptor("or", "boolean", "https://en.wikipedia.org/wiki/Logical_disjunction"),
-    "ℝ": overloadDescriptor("bitwise OR", "number", "https://en.wikipedia.org/wiki/Bitwise_operation#OR"),
+    "𝔹": overloadDescription("or", "boolean", "https://en.wikipedia.org/wiki/Logical_disjunction"),
+    "ℝ": overloadDescription("bitwise OR", "number", "https://en.wikipedia.org/wiki/Bitwise_operation#OR"),
   },
   [MethodId.XOR]: {
-    "𝔹": overloadDescriptor("exclusive or", "boolean", "https://en.wikipedia.org/wiki/Exclusive_or"),
-    "ℝ": overloadDescriptor("bitwise XOR", "number", "https://en.wikipedia.org/wiki/Bitwise_operation#XOR"),
+    "𝔹": overloadDescription("exclusive or", "boolean", "https://en.wikipedia.org/wiki/Exclusive_or"),
+    "ℝ": overloadDescription("bitwise XOR", "number", "https://en.wikipedia.org/wiki/Bitwise_operation#XOR"),
   },
   [MethodId.NOT]: {
-    "𝔹": overloadDescriptor("not", "https://en.wikipedia.org/wiki/Negation"),
-    "ℝ": overloadDescriptor("bitwise NOT", "https://en.wikipedia.org/wiki/Bitwise_operation#NOT"),
+    "𝔹": overloadDescription("not", "https://en.wikipedia.org/wiki/Negation"),
+    "ℝ": overloadDescription("bitwise NOT", "https://en.wikipedia.org/wiki/Bitwise_operation#NOT"),
   },
-  [MethodId.EQU_EMPTY_SHAPE]: methodDescriptor("is approximately empty?"),
+  [MethodId.EQU_EMPTY_SHAPE]: {
+    _: overloadDescription("is approximately empty?")
+  },
 
   /* Conditional operators **/
-  [MethodId.ITE]: methodDescriptor("if", "boolean", "else", "https://en.wikipedia.org/wiki/%3F:#Python"),
+  [MethodId.ITE]: {
+    _: overloadDescription("if", "boolean", "else", "https://en.wikipedia.org/wiki/%3F:#Python")
+  },
 
   /** Stateful operators */
-  [MethodId.INTEGRAL]: methodDescriptor("plus time integral", "velocity", "https://en.wikipedia.org/wiki/Velocity"),
-  [MethodId.DERIVATIVE]: methodDescriptor("derivative wrt time", "active?", "https://en.wikipedia.org/wiki/Velocity#Instantaneous_velocity"),
-  [MethodId.CLAMPED_INTEGRAL]: methodDescriptor("plus time integraal, clamped", "minimum", "maximum", "velocity", "https://en.wikipedia.org/wiki/Velocity"),
+  [MethodId.INTEGRAL]: {
+    _: overloadDescription("plus time integral", "velocity", "https://en.wikipedia.org/wiki/Velocity")
+  },
+  [MethodId.DERIVATIVE]: {
+    _: overloadDescription("derivative wrt time", "active?", "https://en.wikipedia.org/wiki/Velocity#Instantaneous_velocity")
+  },
+  [MethodId.CLAMPED_INTEGRAL]: {
+    _: overloadDescription("plus time integraal, clamped", "minimum", "maximum", "velocity", "https://en.wikipedia.org/wiki/Velocity")
+  },
 
   /** Event operators */
-  [MethodId.WHEN]: methodDescriptor("snapshot on", "update", "http://reactivex.io/documentation/operators/sample.html"),
-  [MethodId.TIMER]: methodDescriptor("after", "seconds", "repeat?", "http://reactivex.io/documentation/operators/timer.html"),
-  [MethodId.RISING]: methodDescriptor("count rising edges", "https://en.wikipedia.org/wiki/Signal_edge"),
-  [MethodId.CALM]: methodDescriptor("block updates with same value", "shallow?", "https://rxmarbles.com/#distinctUntilChanged"),
-  [MethodId.TAKE]: methodDescriptor("take updates", "count", "http://reactivex.io/documentation/operators/take.html"),
-  [MethodId.SKIP]: methodDescriptor("skip updates", "count", "http://reactivex.io/documentation/operators/skip.html"),
-  [MethodId.BUFFER]: methodDescriptor("buffer updates", "amount [@<0 ⇒ count=-@ | @>0 ⇒ duration=@seconds]", "delay?", "active?", "http://reactivex.io/documentation/operators/buffer.html"),
-  [MethodId.FILTER]: methodDescriptor("filter updates", "pass through?", "http://reactivex.io/documentation/operators/filter.html"),
-  [MethodId.SNAPSHOT]: methodDescriptor("on update, snapshot of", "value", "http://reactivex.io/documentation/operators/sample.html"),
-  [MethodId.ASAP]: methodDescriptor("as soon as possible", "maximum intra-frame updates"),
-  [MethodId.MERGE]: methodDescriptor("merged with", "updates", "http://reactivex.io/documentation/operators/merge.html"),
-  [MethodId.MERGE_LEFT]: methodDescriptor("initialize and merge with", "updates", "http://reactivex.io/documentation/operators/merge.html"),
-  [MethodId.MERGE_BOTH]: methodDescriptor("merged with", "simultaneous", "updates", "http://reactivex.io/documentation/operators/merge.html"),
-  [MethodId.VSYNC]: methodDescriptor("when shown on screen", "active?"),
+  [MethodId.WHEN]: {
+    _: overloadDescription("snapshot on", "update", "http://reactivex.io/documentation/operators/sample.html")
+  },
+  [MethodId.TIMER]: {
+    _: overloadDescription("after", "seconds", "repeat?", "http://reactivex.io/documentation/operators/timer.html")
+  },
+  [MethodId.RISING]: {
+    _: overloadDescription("count rising edges", "https://en.wikipedia.org/wiki/Signal_edge")
+  },
+  [MethodId.CALM]: {
+    _: overloadDescription("block updates with same value", "shallow?", "https://rxmarbles.com/#distinctUntilChanged")
+  },
+  [MethodId.TAKE]: {
+    _: overloadDescription("take updates", "count", "http://reactivex.io/documentation/operators/take.html")
+  },
+  [MethodId.SKIP]: {
+    _: overloadDescription("skip updates", "count", "http://reactivex.io/documentation/operators/skip.html")
+  },
+  [MethodId.BUFFER]: {
+    _: overloadDescription("buffer updates", "amount [@<0 ⇒ count=-@ | @>0 ⇒ duration=@seconds]", "delay?", "active?", "http://reactivex.io/documentation/operators/buffer.html")
+  },
+  [MethodId.FILTER]: {
+    _: overloadDescription("filter updates", "pass through?", "http://reactivex.io/documentation/operators/filter.html")
+  },
+  [MethodId.SNAPSHOT]: {
+    _: overloadDescription("on update, snapshot of", "value", "http://reactivex.io/documentation/operators/sample.html")
+  },
+  [MethodId.ASAP]: {
+    _: overloadDescription("as soon as possible", "maximum intra-frame updates")
+  },
+  [MethodId.MERGE]: {
+    _: overloadDescription("merged with", "updates", "http://reactivex.io/documentation/operators/merge.html")
+  },
+  [MethodId.MERGE_LEFT]: {
+    _: overloadDescription("initialize and merge with", "updates", "http://reactivex.io/documentation/operators/merge.html")
+  },
+  [MethodId.MERGE_BOTH]: {
+    _: overloadDescription("merged with", "simultaneous", "updates", "http://reactivex.io/documentation/operators/merge.html")
+  },
+  [MethodId.VSYNC]: {
+    _: overloadDescription("when shown on screen", "active?")
+  },
 
   /** Transformation operators */
-  [MethodId.TRANSLATE_V]: methodDescriptor("translated", "vector", "https://en.wikipedia.org/wiki/Translation_(geometry)"),
-  [MethodId.TRANSLATE_X]: methodDescriptor("translated", "horizontally", "https://en.wikipedia.org/wiki/Translation_(geometry)"),
-  [MethodId.TRANSLATE_Y]: methodDescriptor("translated", "vertically", "https://en.wikipedia.org/wiki/Translation_(geometry)"),
-  [MethodId.ROTATE]: methodDescriptor("rotated", "hours", "https://en.wikipedia.org/wiki/Rotation_(mathematics)"),
-  [MethodId.SCALE]: methodDescriptor("scaled", "factor", "https://en.wikipedia.org/wiki/Scaling_(geometry)"),
-  [MethodId.SCALE_V]: methodDescriptor("scaled", "factors", "https://en.wikipedia.org/wiki/Scaling_(geometry)"),
-  [MethodId.SCALE_X]: methodDescriptor("scaled", "horizontally", "https://en.wikipedia.org/wiki/Scaling_(geometry)"),
-  [MethodId.SCALE_Y]: methodDescriptor("scaled", "vertically", "https://en.wikipedia.org/wiki/Scaling_(geometry)"),
-  [MethodId.PIXEL_SNAP]: methodDescriptor("snapped to pixels", "origin?", "x axis?", "y axis?", "https://en.wikipedia.org/wiki/Snap_(computer_graphics)"),
+  [MethodId.TRANSLATE_V]: {
+    _: overloadDescription("translated", "vector", "https://en.wikipedia.org/wiki/Translation_(geometry)")
+  },
+  [MethodId.TRANSLATE_X]: {
+    _: overloadDescription("translated", "horizontally", "https://en.wikipedia.org/wiki/Translation_(geometry)")
+  },
+  [MethodId.TRANSLATE_Y]: {
+    _: overloadDescription("translated", "vertically", "https://en.wikipedia.org/wiki/Translation_(geometry)")
+  },
+  [MethodId.ROTATE]: {
+    _: overloadDescription("rotated", "hours", "https://en.wikipedia.org/wiki/Rotation_(mathematics)")
+  },
+  [MethodId.SCALE]: {
+    _: overloadDescription("scaled", "factor", "https://en.wikipedia.org/wiki/Scaling_(geometry)")
+  },
+  [MethodId.SCALE_V]: {
+    _: overloadDescription("scaled", "factors", "https://en.wikipedia.org/wiki/Scaling_(geometry)")
+  },
+  [MethodId.SCALE_X]: {
+    _: overloadDescription("scaled", "horizontally", "https://en.wikipedia.org/wiki/Scaling_(geometry)")
+  },
+  [MethodId.SCALE_Y]: {
+    _: overloadDescription("scaled", "vertically", "https://en.wikipedia.org/wiki/Scaling_(geometry)")
+  },
+  [MethodId.PIXEL_SNAP]: {
+    _: overloadDescription("snapped to pixels", "origin?", "x axis?", "y axis?", "https://en.wikipedia.org/wiki/Snap_(computer_graphics)")
+  },
 
   /** Graphics operators */
-  [MethodId.PAINT_SOLID]: methodDescriptor("painted", "color"),
-  [MethodId.PAINT_LINEAR]: methodDescriptor("painted", "start color", "end color", "start point", "end point"),
+  [MethodId.PAINT_SOLID]: {
+    _: overloadDescription("painted", "color")
+  },
+  [MethodId.PAINT_LINEAR]: {
+    _: overloadDescription("painted", "start color", "end color", "start point", "end point")
+  },
   [MethodId.OVERLAY]: {
-    "[𝔾]": overloadDescriptor("stacked on top of each other"),
-    _: overloadDescriptor("in front of", "graphic"),
+    "[𝔾]": overloadDescription("stacked on top of each other"),
+    _: overloadDescription("in front of", "graphic"),
   },
   [MethodId.UNDERLAY]: {
-    "[𝔾]": overloadDescriptor("stacked one below the other"),
-    _: overloadDescriptor("behind", "graphic"),
+    "[𝔾]": overloadDescription("stacked one below the other"),
+    _: overloadDescription("behind", "graphic"),
   },
-  [MethodId.INTERSECTION]: methodDescriptor("intersection with", "graphic", "https://en.wikipedia.org/wiki/Intersection_(set_theory)"),
-  [MethodId.EXCLUSION]: methodDescriptor("subtract", "graphic", "https://en.wikipedia.org/wiki/Complement_(set_theory)#Relative_complement"),
-  [MethodId.PLOT_GRAPH]: methodDescriptor("plot graph over time", "thickness", "tolerance", "maximum #points [@<0 ⇒ ∞ #points]", "https://en.wikipedia.org/wiki/Graph_of_a_function"),
-  [MethodId.CLONE]: methodDescriptor("duplicated", "count", "transformation", "https://en.wikipedia.org/wiki/Affine_transformation"),
-  [MethodId.TRANSFORM]: methodDescriptor("transformed with", "transformation", "https://en.wikipedia.org/wiki/Affine_transformation"),
-  [MethodId.PLOT_POINTS]: methodDescriptor("updates over time", "thickness", "tolerance", "maximum #points [@<0 ⇒ ∞ #points]", "https://en.wikipedia.org/wiki/Graph_of_a_function"),
-  [MethodId.TRANSPARENTIZE]: methodDescriptor("transparent", "factor", "https://en.wikipedia.org/wiki/Transparency_(graphic)"),
+  [MethodId.INTERSECTION]: {
+    _: overloadDescription("intersection with", "graphic", "https://en.wikipedia.org/wiki/Intersection_(set_theory)")
+  },
+  [MethodId.EXCLUSION]: {
+    _: overloadDescription("subtract", "graphic", "https://en.wikipedia.org/wiki/Complement_(set_theory)#Relative_complement")
+  },
+  [MethodId.PLOT_GRAPH]: {
+    _: overloadDescription("plot graph over time", "thickness", "tolerance", "maximum #points [@<0 ⇒ ∞ #points]", "https://en.wikipedia.org/wiki/Graph_of_a_function")
+  },
+  [MethodId.CLONE]: {
+    _: overloadDescription("duplicated", "count", "transformation", "https://en.wikipedia.org/wiki/Affine_transformation")
+  },
+  [MethodId.TRANSFORM]: {
+    _: overloadDescription("transformed with", "transformation", "https://en.wikipedia.org/wiki/Affine_transformation")
+  },
+  [MethodId.PLOT_POINTS]: {
+    _: overloadDescription("updates over time", "thickness", "tolerance", "maximum #points [@<0 ⇒ ∞ #points]", "https://en.wikipedia.org/wiki/Graph_of_a_function")
+  },
+  [MethodId.TRANSPARENTIZE]: {
+    _: overloadDescription("transparent", "factor", "https://en.wikipedia.org/wiki/Transparency_(graphic)")
+  },
   [MethodId.FILLED]: {
-    "𝕍": overloadDescriptor("as graphic", "thickness"),
-    "𝕊": overloadDescriptor("as graphic", "horizontal text alignment", "vertical text alignment", "line spacing"),
-    _: overloadDescriptor("as graphic", "color"),
+    "𝕍": overloadDescription("as graphic", "thickness"),
+    "𝕊": overloadDescription("as graphic", "horizontal text alignment", "vertical text alignment", "line spacing"),
+    _: overloadDescription("as graphic", "color"),
   },
-  [MethodId.CONTAINS_POINT]: methodDescriptor("contains point?", "point"),
-  [MethodId.RENDER]: methodDescriptor("render to image", "width [pixels]", "height [pixels]", "interpolated?"),
-  [MethodId.COMPOSE]: methodDescriptor("compose", "operator", "foreground", "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation"),
+  [MethodId.CONTAINS_POINT]: {
+    _: overloadDescription("contains point?", "point")
+  },
+  [MethodId.RENDER]: {
+    _: overloadDescription("render to image", "width [pixels]", "height [pixels]", "interpolated?")
+  },
+  [MethodId.COMPOSE]: {
+    _: overloadDescription("compose", "operator", "foreground", "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation")
+  },
 
   /** Vector and matrix operators */
   [MethodId.HOR]:
   {
-    "𝕋": overloadDescriptor("red basis vector", "https://en.wikipedia.org/wiki/Basis_(linear_algebra)"),
-    _: overloadDescriptor("horizontal coordinate", "https://en.wikipedia.org/wiki/Cartesian_coordinate_system"),
+    "𝕋": overloadDescription("red basis vector", "https://en.wikipedia.org/wiki/Basis_(linear_algebra)"),
+    _: overloadDescription("horizontal coordinate", "https://en.wikipedia.org/wiki/Cartesian_coordinate_system"),
   },
   [MethodId.VER]: {
-    "𝕋": overloadDescriptor("green basis vector", "https://en.wikipedia.org/wiki/Basis_(linear_algebra)"),
-    _: overloadDescriptor("vertical coordinate", "https://en.wikipedia.org/wiki/Cartesian_coordinate_system"),
+    "𝕋": overloadDescription("green basis vector", "https://en.wikipedia.org/wiki/Basis_(linear_algebra)"),
+    _: overloadDescription("vertical coordinate", "https://en.wikipedia.org/wiki/Cartesian_coordinate_system"),
   },
-  [MethodId.WEIGHT]: methodDescriptor("w coordinate", "https://www.tomdalling.com/blog/modern-opengl/explaining-homogenous-coordinates-and-projective-geometry/"),
+  [MethodId.WEIGHT]: {
+    _: overloadDescription("w coordinate", "https://www.tomdalling.com/blog/modern-opengl/explaining-homogenous-coordinates-and-projective-geometry/")
+  },
   [MethodId.ORIG]: {
-    "𝕋": overloadDescriptor("yellow basis origin", "https://en.wikipedia.org/wiki/Origin_(mathematics)"),
+    "𝕋": overloadDescription("yellow basis origin", "https://en.wikipedia.org/wiki/Origin_(mathematics)"),
   },
-  [MethodId.POST_TRANSFORMS]: methodDescriptor("transformations after labeled graphic", "https://en.wikipedia.org/wiki/Graphics_pipeline#The_World_Coordinate_System"),
-  [MethodId.DOT]: methodDescriptor("dot product with", "vector", "https://en.wikipedia.org/wiki/Dot_product"),
-  [MethodId.DET]: methodDescriptor("determinant with", "vector", "https://en.wikipedia.org/wiki/Determinant#2_%C3%97_2_matrices"),
-  [MethodId.REFLECT]: methodDescriptor("reflected across", "direction", "https://en.wikipedia.org/wiki/Reflection_(mathematics)"),
-  [MethodId.ANGLE]: methodDescriptor("angle between", "vector", "radians?", "https://en.wikipedia.org/wiki/Dot_product#Geometric_definition"),
-  [MethodId.TOWARDS]: methodDescriptor("in the direction of", "vector"),
-  [MethodId.CARTESIAN]: methodDescriptor("to Euclidean point or vector", "https://en.wikipedia.org/wiki/Projective_space"),
-  [MethodId.NORMALIZE]: methodDescriptor("normalized", "https://en.wikipedia.org/wiki/Unit_vector"),
-  [MethodId.CROSS]: methodDescriptor("3D cross product product met", "vector", "https://en.wikipedia.org/wiki/Cross_product"),
+  [MethodId.POST_TRANSFORMS]: {
+    _: overloadDescription("transformations after labeled graphic", "https://en.wikipedia.org/wiki/Graphics_pipeline#The_World_Coordinate_System")
+  },
+  [MethodId.DOT]: {
+    _: overloadDescription("dot product with", "vector", "https://en.wikipedia.org/wiki/Dot_product")
+  },
+  [MethodId.DET]: {
+    _: overloadDescription("determinant with", "vector", "https://en.wikipedia.org/wiki/Determinant#2_%C3%97_2_matrices")
+  },
+  [MethodId.REFLECT]: {
+    _: overloadDescription("reflected across", "direction", "https://en.wikipedia.org/wiki/Reflection_(mathematics)")
+  },
+  [MethodId.ANGLE]: {
+    _: overloadDescription("angle between", "vector", "radians?", "https://en.wikipedia.org/wiki/Dot_product#Geometric_definition")
+  },
+  [MethodId.TOWARDS]: {
+    _: overloadDescription("in the direction of", "vector")
+  },
+  [MethodId.CARTESIAN]: {
+    _: overloadDescription("to Euclidean point or vector", "https://en.wikipedia.org/wiki/Projective_space")
+  },
+  [MethodId.NORMALIZE]: {
+    _: overloadDescription("normalized", "https://en.wikipedia.org/wiki/Unit_vector")
+  },
+  [MethodId.CROSS]: {
+    _: overloadDescription("3D cross product product met", "vector", "https://en.wikipedia.org/wiki/Cross_product")
+  },
 
-  [MethodId.BOUNDING_POINT]: methodDescriptor("point in AABB", "Barycentric coordinates", "https://en.wikipedia.org/wiki/Minimum_bounding_box#Axis-aligned_minimum_bounding_box"),
-  [MethodId.BOUNDING_WIDTH]: methodDescriptor("width of AABB", "https://en.wikipedia.org/wiki/Minimum_bounding_box#Axis-aligned_minimum_bounding_box"),
-  [MethodId.BOUNDING_HEIGHT]: methodDescriptor("heigt of AABB", "https://en.wikipedia.org/wiki/Minimum_bounding_box#Axis-aligned_minimum_bounding_box"),
+  [MethodId.BOUNDING_POINT]: {
+    _: overloadDescription("point in AABB", "Barycentric coordinates", "https://en.wikipedia.org/wiki/Minimum_bounding_box#Axis-aligned_minimum_bounding_box")
+  },
+  [MethodId.BOUNDING_WIDTH]: {
+    _: overloadDescription("width of AABB", "https://en.wikipedia.org/wiki/Minimum_bounding_box#Axis-aligned_minimum_bounding_box")
+  },
+  [MethodId.BOUNDING_HEIGHT]: {
+    _: overloadDescription("heigt of AABB", "https://en.wikipedia.org/wiki/Minimum_bounding_box#Axis-aligned_minimum_bounding_box")
+  },
 
-  [MethodId.HIT_TEST]: methodDescriptor("hits?", "with label", "without label", "active?", "maximum depth"),
-  [MethodId.RAY_CAST]: methodDescriptor("data hits", "data type", "with label", "without label", "active?"),
-  [MethodId.HIT_REGION]: methodDescriptor("hit region", "label", "data"),
+  [MethodId.HIT_TEST]: {
+    _: overloadDescription("hits?", "with label", "without label", "active?", "maximum depth")
+  },
+  [MethodId.RAY_CAST]: {
+    _: overloadDescription("data hits", "data type", "with label", "without label", "active?")
+  },
+  [MethodId.HIT_REGION]: {
+    _: overloadDescription("hit region", "label", "data")
+  },
 
-  [MethodId.CULL]: methodDescriptor("cull", "active?", "https://en.wikipedia.org/wiki/Hidden-surface_determination#Viewing-frustum_culling"),
+  [MethodId.CULL]: {
+    _: overloadDescription("cull", "active?", "https://en.wikipedia.org/wiki/Hidden-surface_determination#Viewing-frustum_culling")
+  },
 
   // [MethodId.PROJECT]: "",
   // [MethodId.REJECT]: "",
 
   /** Puzzle methods */
-  [MethodId.EXTRA]: methodDescriptor("extra", "value"),
-  [MethodId.PUZZLE]: methodDescriptor("puzzle", "kind [@=1 ⇒ fixed blocks, @2 ⇒ free values]"),
-  [MethodId.OUTLINE]: methodDescriptor("outlines", "enabled?"),
-  [MethodId.CORRECT]: methodDescriptor("correct", "preview?", "wrong value"),
-  [MethodId.PREMADE]: methodDescriptor("pre-made", "skip?"),
-  [MethodId.SELECT]: methodDescriptor("selected", "functie?"),
-  [MethodId.IGNORE]: methodDescriptor("ignored"),
-  [MethodId.CYCLIC]: methodDescriptor("animation cycle", "duration"),
-  [MethodId.FEEDBACK]: methodDescriptor("feedback", "preview?", "initial value", "recursive reference"),
-  [MethodId.ACTUATOR]: methodDescriptor("actuator", "which [@=0 ⇒ off | @=1 ⇒ eye | @=2 ⇒ ear]", "actuator reference"),
+  [MethodId.EXTRA]: {
+    _: overloadDescription("extra", "value")
+  },
+  [MethodId.PUZZLE]: {
+    _: overloadDescription("puzzle", "kind [@=1 ⇒ fixed blocks, @2 ⇒ free values]")
+  },
+  [MethodId.OUTLINE]: {
+    _: overloadDescription("outlines", "enabled?")
+  },
+  [MethodId.CORRECT]: {
+    _: overloadDescription("correct", "preview?", "wrong value")
+  },
+  [MethodId.PREMADE]: {
+    _: overloadDescription("pre-made", "skip?")
+  },
+  [MethodId.SELECT]: {
+    _: overloadDescription("selected", "functie?")
+  },
+  [MethodId.IGNORE]: {
+    _: overloadDescription("ignored")
+  },
+  [MethodId.CYCLIC]: {
+    _: overloadDescription("animation cycle", "duration")
+  },
+  [MethodId.FEEDBACK]: {
+    _: overloadDescription("feedback", "preview?", "initial value", "recursive reference")
+  },
+  [MethodId.ACTUATOR]: {
+    _: overloadDescription("actuator", "which [@=0 ⇒ off | @=1 ⇒ eye | @=2 ⇒ ear]", "actuator reference")
+  },
 
   /** Drawing methods */
-  [MethodId.MOVE_TO]: methodDescriptor("move to", "start point", "https://www.w3schools.com/tags/canvas_moveto.asp"),
-  [MethodId.LINE_TO]: methodDescriptor("draw line to", "end point", "https://www.w3schools.com/tags/canvas_lineto.asp"),
-  [MethodId.QUAD_TO]: methodDescriptor("draw quadratic curve to", "end point", "control point", "https://www.w3schools.com/tags/canvas_quadraticcurveto.asp"),
-  [MethodId.CUBIC_TO]: methodDescriptor("draw cubic curve to", "end point", "first control point", "second control point", "https://www.w3schools.com/tags/canvas_beziercurveto.asp"),
-  [MethodId.LAST_POINT]: methodDescriptor("endpoint"),
-  [MethodId.GET_POINTS]: methodDescriptor("list of points", "corners only?"),
+  [MethodId.MOVE_TO]: {
+    _: overloadDescription("move to", "start point", "https://www.w3schools.com/tags/canvas_moveto.asp")
+  },
+  [MethodId.LINE_TO]: {
+    _: overloadDescription("draw line to", "end point", "https://www.w3schools.com/tags/canvas_lineto.asp")
+  },
+  [MethodId.QUAD_TO]: {
+    _: overloadDescription("draw quadratic curve to", "end point", "control point", "https://www.w3schools.com/tags/canvas_quadraticcurveto.asp")
+  },
+  [MethodId.CUBIC_TO]: {
+    _: overloadDescription("draw cubic curve to", "end point", "first control point", "second control point", "https://www.w3schools.com/tags/canvas_beziercurveto.asp")
+  },
+  [MethodId.LAST_POINT]: {
+    _: overloadDescription("endpoint")
+  },
+  [MethodId.GET_POINTS]: {
+    _: overloadDescription("list of points", "corners only?")
+  },
   // [MethodId.ARC_TO]: MethodDescriptor("teken circleboog naar", "start direction", "end point", "radius", "https://www.w3schools.com/tags/canvas_arcto.asp"),
 
   [MethodId.STROKE]: {
-    "𝔽": overloadDescriptor("stroked", "color", "thickness", "round corners?", "https://www.w3schools.com/tags/canvas_stroke.asp"),
-    _: overloadDescriptor("stroked", "color", "thickness", "closed?", "round corners?", "https://www.w3schools.com/tags/canvas_stroke.asp"),
+    "𝔽": overloadDescription("stroked", "color", "thickness", "round corners?", "https://www.w3schools.com/tags/canvas_stroke.asp"),
+    _: overloadDescription("stroked", "color", "thickness", "closed?", "round corners?", "https://www.w3schools.com/tags/canvas_stroke.asp"),
   },
 
   /** Factory methods */
   // [MethodId.NEW_BINDING]: "",
-  [MethodId.VECTOR_2D]: methodDescriptor("vector", "x coordinate", "y coordinate", "https://en.wikipedia.org/wiki/Euclidean_vector"),
-  [MethodId.POINT_2D]: methodDescriptor("point", "x coordinate", "y coordinate", "https://en.wikipedia.org/wiki/Point_(geometry)"),
-  [MethodId.HOMOGENEOUS_2D]: methodDescriptor("point or vector", "x coordinate", "y coordinate", "w coordinate", "https://www.tomdalling.com/blog/modern-opengl/explaining-homogenous-coordinates-and-projective-geometry/"),
-  [MethodId.MATRIX_2D]: methodDescriptor("transformation", "x direction", "y direction", "origin", "https://en.wikipedia.org/wiki/Affine_transformation"),
-  [MethodId.COLOR_RGB]: methodDescriptor("color", "red", "green", "blue", "https://en.wikipedia.org/wiki/RGB_color_model"),
-  [MethodId.COLOR_HSL]: methodDescriptor("color", "hue", "saturation", "lightness", "perceptual?", "https://en.wikipedia.org/wiki/HSL_and_HSV"),
-  [MethodId.SHAPE_NGON]: methodDescriptor("regular polygon", "corner count", "https://en.wikipedia.org/wiki/Regular_polygon"),
-  [MethodId.GAMEPAD_SWITCH]: methodDescriptor("gamepad switch", "switch id", "gamepad id", "https://www.w3.org/TR/gamepad/#fig-visual-representation-of-a-standard-gamepad-layout"),
-  [MethodId.GAMEPAD_NUMBER]: methodDescriptor("gamepad button", "button id", "gamepad id", "https://www.w3.org/TR/gamepad/#fig-visual-representation-of-a-standard-gamepad-layout"),
-  [MethodId.GAMEPAD_VECTOR]: methodDescriptor("gamepad direction", "direction id", "gamepad id", "https://www.w3.org/TR/gamepad/#fig-visual-representation-of-a-standard-gamepad-layout"),
-  [MethodId.FIGURE_LINE]: methodDescriptor("line segment", "start point", "end point", "https://en.wikipedia.org/wiki/Line_segment"),
-  [MethodId.FIGURE_RECT]: methodDescriptor("rectangle", "width", "height", "corner rounding", "center point", "https://en.wikipedia.org/wiki/Rectangle"),
-  [MethodId.FIGURE_CIRCLE]: methodDescriptor("circle", "radius", "center point", "https://en.wikipedia.org/wiki/Circle"),
-  [MethodId.FIGURE_ELLIPSE]: methodDescriptor("ellipse", "width", "height", "center point", "rotation", "start angle", "end angle", "reversed", "https://en.wikipedia.org/wiki/Ellipse"),
-  [MethodId.DRAWING_PATH]: methodDescriptor("line drawing", "start point", "https://www.html5canvastutorials.com/tutorials/html5-canvas-paths"),
-  [MethodId.BITMAP_IMAGE]: methodDescriptor("external sprite", "URI", "interpolated?", "height", "https://en.wikipedia.org/wiki/Sprite_(computer_graphics)"),
-  [MethodId.EMPTY_LIST]: methodDescriptor("empty array", "type", "https://en.wikipedia.org/wiki/Array_data_structure"),
-  [MethodId.EMPTY_SET]: methodDescriptor("empty set", "type", "https://en.wikipedia.org/wiki/Set_(mathematics)"),
-  [MethodId.EMPTY_MAP]: methodDescriptor("empty map [associative array]", "key type", "value type", "https://en.wikipedia.org/wiki/Associative_array"),
-  [MethodId.NUMERIC_RANGE]: methodDescriptor("numeric range", "start", "step", "count", "https://en.wikipedia.org/wiki/Array_data_structure"),
-  [MethodId.MOUSE_BUTTON]: methodDescriptor("mouse down tracker", "which button [@=0 ⇒ any]", "support touch?"),
-  [MethodId.MOUSE_POSITION]: methodDescriptor("mouse position tracker", "allow hover?", "support touch?"),
-  [MethodId.TOUCH_TRACKER]: methodDescriptor("multi touch tracker"),
-  [MethodId.TOUCH_DOWN]: methodDescriptor("touch down tracker", "which touch"),
-  [MethodId.TOUCH_POSITION]: methodDescriptor("touch position tracker", "which touch"),
-  [MethodId.KEY_TRACKER]: methodDescriptor("keyboard press tracker [full view only]", "code", "debug", "https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code#try_it_out"),
-  [MethodId.UNIQUE_ID]: methodDescriptor("unique code"),
-  [MethodId.SOUND_STREAM]: methodDescriptor("sound file stream", "id or URI"),
-  [MethodId.SOUND_BUFFER]: methodDescriptor("sound file buffer", "id or URI"),
-  [MethodId.PIXELS_PER_UNIT]: methodDescriptor("screen pixels per ViKiD unit"),
+  [MethodId.VECTOR_2D]: {
+    _: overloadDescription("vector", "x coordinate", "y coordinate", "https://en.wikipedia.org/wiki/Euclidean_vector")
+  },
+  [MethodId.POINT_2D]: {
+    _: overloadDescription("point", "x coordinate", "y coordinate", "https://en.wikipedia.org/wiki/Point_(geometry)")
+  },
+  [MethodId.HOMOGENEOUS_2D]: {
+    _: overloadDescription("point or vector", "x coordinate", "y coordinate", "w coordinate", "https://www.tomdalling.com/blog/modern-opengl/explaining-homogenous-coordinates-and-projective-geometry/")
+  },
+  [MethodId.MATRIX_2D]: {
+    _: overloadDescription("transformation", "x direction", "y direction", "origin", "https://en.wikipedia.org/wiki/Affine_transformation")
+  },
+  [MethodId.COLOR_RGB]: {
+    _: overloadDescription("color", "red", "green", "blue", "https://en.wikipedia.org/wiki/RGB_color_model")
+  },
+  [MethodId.COLOR_HSL]: {
+    _: overloadDescription("color", "hue", "saturation", "lightness", "perceptual?", "https://en.wikipedia.org/wiki/HSL_and_HSV")
+  },
+  [MethodId.SHAPE_NGON]: {
+    _: overloadDescription("regular polygon", "corner count", "https://en.wikipedia.org/wiki/Regular_polygon")
+  },
+  [MethodId.GAMEPAD_SWITCH]: {
+    _: overloadDescription("gamepad switch", "switch id", "gamepad id", "https://www.w3.org/TR/gamepad/#fig-visual-representation-of-a-standard-gamepad-layout")
+  },
+  [MethodId.GAMEPAD_NUMBER]: {
+    _: overloadDescription("gamepad button", "button id", "gamepad id", "https://www.w3.org/TR/gamepad/#fig-visual-representation-of-a-standard-gamepad-layout")
+  },
+  [MethodId.GAMEPAD_VECTOR]: {
+    _: overloadDescription("gamepad direction", "direction id", "gamepad id", "https://www.w3.org/TR/gamepad/#fig-visual-representation-of-a-standard-gamepad-layout")
+  },
+  [MethodId.FIGURE_LINE]: {
+    _: overloadDescription("line segment", "start point", "end point", "https://en.wikipedia.org/wiki/Line_segment")
+  },
+  [MethodId.FIGURE_RECT]: {
+    _: overloadDescription("rectangle", "width", "height", "corner rounding", "center point", "https://en.wikipedia.org/wiki/Rectangle")
+  },
+  [MethodId.FIGURE_CIRCLE]: {
+    _: overloadDescription("circle", "radius", "center point", "https://en.wikipedia.org/wiki/Circle")
+  },
+  [MethodId.FIGURE_ELLIPSE]: {
+    _: overloadDescription("ellipse", "width", "height", "center point", "rotation", "start angle", "end angle", "reversed", "https://en.wikipedia.org/wiki/Ellipse")
+  },
+  [MethodId.DRAWING_PATH]: {
+    _: overloadDescription("line drawing", "start point", "https://www.html5canvastutorials.com/tutorials/html5-canvas-paths")
+  },
+  [MethodId.BITMAP_IMAGE]: {
+    _: overloadDescription("external sprite", "URI", "interpolated?", "height", "https://en.wikipedia.org/wiki/Sprite_(computer_graphics)")
+  },
+  [MethodId.EMPTY_LIST]: {
+    _: overloadDescription("empty array", "type", "https://en.wikipedia.org/wiki/Array_data_structure")
+  },
+  [MethodId.EMPTY_SET]: {
+    _: overloadDescription("empty set", "type", "https://en.wikipedia.org/wiki/Set_(mathematics)")
+  },
+  [MethodId.EMPTY_MAP]: {
+    _: overloadDescription("empty map [associative array]", "key type", "value type", "https://en.wikipedia.org/wiki/Associative_array")
+  },
+  [MethodId.NUMERIC_RANGE]: {
+    _: overloadDescription("numeric range", "start", "step", "count", "https://en.wikipedia.org/wiki/Array_data_structure")
+  },
+  [MethodId.MOUSE_BUTTON]: {
+    _: overloadDescription("mouse down tracker", "which button [@=0 ⇒ any]", "support touch?")
+  },
+  [MethodId.MOUSE_POSITION]: {
+    _: overloadDescription("mouse position tracker", "allow hover?", "support touch?")
+  },
+  [MethodId.TOUCH_TRACKER]: {
+    _: overloadDescription("multi touch tracker")
+  },
+  [MethodId.TOUCH_DOWN]: {
+    _: overloadDescription("touch down tracker", "which touch")
+  },
+  [MethodId.TOUCH_POSITION]: {
+    _: overloadDescription("touch position tracker", "which touch")
+  },
+  [MethodId.KEY_TRACKER]: {
+    _: overloadDescription("keyboard press tracker [full view only]", "code", "debug", "https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code#try_it_out")
+  },
+  [MethodId.UNIQUE_ID]: {
+    _: overloadDescription("unique code")
+  },
+  [MethodId.SOUND_STREAM]: {
+    _: overloadDescription("sound file stream", "id or URI")
+  },
+  [MethodId.SOUND_BUFFER]: {
+    _: overloadDescription("sound file buffer", "id or URI")
+  },
+  [MethodId.PIXELS_PER_UNIT]: {
+    _: overloadDescription("screen pixels per ViKiD unit")
+  },
   // [MethodId.NEW_MICROPHONE]: MethodDescriptor("microphone sound source"),
 
   /** List methods */
-  [MethodId.APPEND]: methodDescriptor("append", "element", "https://en.wikipedia.org/wiki/Array_data_structure"),
-  [MethodId.INSERT]: methodDescriptor("insert", "index or indices", "element(s)", "https://en.wikipedia.org/wiki/Array_data_structure"),
-  [MethodId.CONCAT]: methodDescriptor("concatenate", "elements", "https://en.wikipedia.org/wiki/Array_data_structure"),
-  [MethodId.SLICE]: methodDescriptor("sliced", "index", "count", "https://en.wikipedia.org/wiki/Array_data_structure"),
-  [MethodId.REMOVE]: {
-    "∀α ∀κ ∈ ℝ∪𝕊: ⧼ κ ↦ α ⧽": overloadDescriptor("remove", "key", "https://en.wikipedia.org/wiki/Associative_array"),
-    "∀κ ∈ ℝ∪𝕊: {κ}": overloadDescriptor("remove", "key", "https://en.wikipedia.org/wiki/Set_(mathematics)"),
-    _: overloadDescriptor("remove", "index", "count", "https://en.wikipedia.org/wiki/Array_data_structure")
+  [MethodId.APPEND]: {
+    _: overloadDescription("append", "element", "https://en.wikipedia.org/wiki/Array_data_structure")
   },
-  [MethodId.LENGTH]: methodDescriptor("element count", "https://en.wikipedia.org/wiki/Array_data_structure"),
-  [MethodId.ITEM]: methodDescriptor("element(s) at", "index or indices or conditions", "wrap?", "https://en.wikipedia.org/wiki/Array_data_structure"),
-  [MethodId.SEARCH]: methodDescriptor("indices of", "element(s)", "https://en.wikipedia.org/wiki/Array_data_structure"),
-  [MethodId.CONTAINS]: methodDescriptor("contains", "element(s)", "https://en.wikipedia.org/wiki/Element_(mathematics)"),
-  [MethodId.REPLACE]: methodDescriptor("with element(s) at", "index or indices", "element(s)", "https://en.wikipedia.org/wiki/Array_data_structure"),
-  [MethodId.REVERSE]: methodDescriptor("reversed", "https://en.wikipedia.org/wiki/Array_data_structure"),
-  [MethodId.SUM]: methodDescriptor("sum", "zero if empty?", "https://simple.wikipedia.org/wiki/Sum"),
-  [MethodId.PRODUCT]: methodDescriptor("product", "one if empty?", "https://simple.wikipedia.org/wiki/Product_(mathematics)"),
-  [MethodId.FLATTEN]: methodDescriptor("flatten", "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat"),
+  [MethodId.INSERT]: {
+    _: overloadDescription("insert", "index or indices", "element(s)", "https://en.wikipedia.org/wiki/Array_data_structure")
+  },
+  [MethodId.CONCAT]: {
+    _: overloadDescription("concatenate", "elements", "https://en.wikipedia.org/wiki/Array_data_structure")
+  },
+  [MethodId.SLICE]: {
+    _: overloadDescription("sliced", "index", "count", "https://en.wikipedia.org/wiki/Array_data_structure")
+  },
+  [MethodId.REMOVE]: {
+    "∀α ∀κ ∈ ℝ∪𝕊: ⧼ κ ↦ α ⧽": overloadDescription("remove", "key", "https://en.wikipedia.org/wiki/Associative_array"),
+    "∀κ ∈ ℝ∪𝕊: {κ}": overloadDescription("remove", "key", "https://en.wikipedia.org/wiki/Set_(mathematics)"),
+    _: overloadDescription("remove", "index", "count", "https://en.wikipedia.org/wiki/Array_data_structure")
+  },
+  [MethodId.LENGTH]: {
+    _: overloadDescription("element count", "https://en.wikipedia.org/wiki/Array_data_structure")
+  },
+  [MethodId.ITEM]: {
+    _: overloadDescription("element(s) at", "index or indices or conditions", "wrap?", "https://en.wikipedia.org/wiki/Array_data_structure")
+  },
+  [MethodId.SEARCH]: {
+    _: overloadDescription("indices of", "element(s)", "https://en.wikipedia.org/wiki/Array_data_structure")
+  },
+  [MethodId.CONTAINS]: {
+    _: overloadDescription("contains", "element(s)", "https://en.wikipedia.org/wiki/Element_(mathematics)")
+  },
+  [MethodId.REPLACE]: {
+    _: overloadDescription("with element(s) at", "index or indices", "element(s)", "https://en.wikipedia.org/wiki/Array_data_structure")
+  },
+  [MethodId.REVERSE]: {
+    _: overloadDescription("reversed", "https://en.wikipedia.org/wiki/Array_data_structure")
+  },
+  [MethodId.SUM]: {
+    _: overloadDescription("sum", "zero if empty?", "https://simple.wikipedia.org/wiki/Sum")
+  },
+  [MethodId.PRODUCT]: {
+    _: overloadDescription("product", "one if empty?", "https://simple.wikipedia.org/wiki/Product_(mathematics)")
+  },
+  [MethodId.FLATTEN]: {
+    _: overloadDescription("flatten", "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat")
+  },
   // [MethodId.TRIM]: MethodDescriptor("trim elements", "which [@>0 ⇒ without stamp=@ | @≤0 ⇒ with stamp=-@]", "update when empty?"),
-  [MethodId.FILL]: methodDescriptor("filled with", "value", "https://en.wikipedia.org/wiki/Array_data_structure"),
-  [MethodId.ORDER]: methodDescriptor("indices of ordered elements", "descending?"),
-  [MethodId.REPEAT]: methodDescriptor("repeated as list", "count", "https://en.wikipedia.org/wiki/Array_data_structure"),
-  [MethodId.TO_DRAWING]: methodDescriptor("as line drawing", "starting point", "separate segments?", "https://www.html5canvastutorials.com/tutorials/html5-canvas-paths"),
-  [MethodId.TO_SET]: methodDescriptor("as set", "https://en.wikipedia.org/wiki/Set_(mathematics)"),
-  [MethodId.TO_MAP]: methodDescriptor("as map [associative array]", "https://en.wikipedia.org/wiki/Associative_array"),
-  [MethodId.TRANSPOSE]: methodDescriptor("transposed", "https://en.wikipedia.org/wiki/Transpose"),
+  [MethodId.FILL]: {
+    _: overloadDescription("filled with", "value", "https://en.wikipedia.org/wiki/Array_data_structure")
+  },
+  [MethodId.ORDER]: {
+    _: overloadDescription("indices of ordered elements", "descending?")
+  },
+  [MethodId.REPEAT]: {
+    _: overloadDescription("repeated as list", "count", "https://en.wikipedia.org/wiki/Array_data_structure")
+  },
+  [MethodId.TO_DRAWING]: {
+    _: overloadDescription("as line drawing", "starting point", "separate segments?", "https://www.html5canvastutorials.com/tutorials/html5-canvas-paths")
+  },
+  [MethodId.TO_SET]: {
+    _: overloadDescription("as set", "https://en.wikipedia.org/wiki/Set_(mathematics)")
+  },
+  [MethodId.TO_MAP]: {
+    _: overloadDescription("as map [associative array]", "https://en.wikipedia.org/wiki/Associative_array")
+  },
+  [MethodId.TRANSPOSE]: {
+    _: overloadDescription("transposed", "https://en.wikipedia.org/wiki/Transpose")
+  },
 
   [MethodId.PRINT]: {
-    "𝕍": overloadDescriptor("as text", "digits after decimal point"),
-    "𝕋": overloadDescriptor("as text", "digits after decimal point"),
-    "ℝ": overloadDescriptor("as text", "digits after decimal point"),
-    _: overloadDescriptor("as text"),
+    "𝕍": overloadDescription("as text", "digits after decimal point"),
+    "𝕋": overloadDescription("as text", "digits after decimal point"),
+    "ℝ": overloadDescription("as text", "digits after decimal point"),
+    _: overloadDescription("as text"),
   },
 
-  [MethodId.CASE]: methodDescriptor("letter case", "mode [@<0 ⇒ lowercase | @>0 ⇒ uppercase]", "https://en.wikipedia.org/wiki/Letter_case"),
-  [MethodId.JOIN]: methodDescriptor("join text", "separator"),
-  [MethodId.FORMAT]: methodDescriptor("format to text", "format", "indent"),
-  [MethodId.PARSE]: methodDescriptor("parse from text", "formaat", "type"),
-  [MethodId.PROMPT]: methodDescriptor("ask the user for text input", "default input", "open!"),
-  [MethodId.ALERT]: methodDescriptor("notify the user", "open!"),
-  [MethodId.CONFIRM]: methodDescriptor("ask the user for confirmation", "open!"),
-  [MethodId.BROWSE]: methodDescriptor("open the HTML page in the browser", "open!"),
+  [MethodId.CASE]: {
+    _: overloadDescription("letter case", "mode [@<0 ⇒ lowercase | @>0 ⇒ uppercase]", "https://en.wikipedia.org/wiki/Letter_case")
+  },
+  [MethodId.JOIN]: {
+    _: overloadDescription("join text", "separator")
+  },
+  [MethodId.FORMAT]: {
+    _: overloadDescription("format to text", "format", "indent")
+  },
+  [MethodId.PARSE]: {
+    _: overloadDescription("parse from text", "formaat", "type")
+  },
+  [MethodId.PROMPT]: {
+    _: overloadDescription("ask the user for text input", "default input", "open!")
+  },
+  [MethodId.ALERT]: {
+    _: overloadDescription("notify the user", "open!")
+  },
+  [MethodId.CONFIRM]: {
+    _: overloadDescription("ask the user for confirmation", "open!")
+  },
+  [MethodId.BROWSE]: {
+    _: overloadDescription("open the HTML page in the browser", "open!")
+  },
 
-  [MethodId.PAD]: methodDescriptor("padded with", "value", "length", "at the end?"),
+  [MethodId.PAD]: {
+    _: overloadDescription("padded with", "value", "length", "at the end?")
+  },
 
-  [MethodId.INDEX]: methodDescriptor("instance index", "which [@=0 ⇒ serial_number | @=1 ⇒ batch_index | @=2 ⇒ instance_id]"),
-  [MethodId.GET_STAMP]: methodDescriptor("get timestamp"),
-  [MethodId.SET_STAMP]: methodDescriptor("set timestamp", "new timestamp"),
+  [MethodId.INDEX]: {
+    _: overloadDescription("instance index", "which [@=0 ⇒ serial_number | @=1 ⇒ batch_index | @=2 ⇒ instance_id]")
+  },
+  [MethodId.GET_STAMP]: {
+    _: overloadDescription("get timestamp")
+  },
+  [MethodId.SET_STAMP]: {
+    _: overloadDescription("set timestamp", "new timestamp")
+  },
 
-  [MethodId.PLAY_SOUND]: methodDescriptor("play sound", "active?", "rate"),
-  [MethodId.SET_VOLUME]: methodDescriptor("with volume", "value"),
+  [MethodId.PLAY_SOUND]: {
+    _: overloadDescription("play sound", "active?", "rate")
+  },
+  [MethodId.SET_VOLUME]: {
+    _: overloadDescription("with volume", "value")
+  },
   // [MethodId.ANALYSE_AUDIO]: MethodDescriptor("play and analyse sound", "Fast Fourier Transform size", "minimum Decibels", "maximum Decibels", "smoothing time constant", "active?", "https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode"),
   [MethodId.LOOP_SOUND]: {
-    "💥": overloadDescriptor("loop sound", "active?", "start time", "duration", "https://en.wikipedia.org/wiki/Loop_(music)"),
-    "🎶": overloadDescriptor("loop sound", "active?", "https://en.wikipedia.org/wiki/Loop_(music)"),
+    "💥": overloadDescription("loop sound", "active?", "start time", "duration", "https://en.wikipedia.org/wiki/Loop_(music)"),
+    "🎶": overloadDescription("loop sound", "active?", "https://en.wikipedia.org/wiki/Loop_(music)"),
   },
-  [MethodId.SLICE_SOUND]: methodDescriptor("slice sound", "start time", "duration"),
-  [MethodId.IS_PLAYING]: methodDescriptor("is playing?"),
-  [MethodId.ADD_AUDIO]: methodDescriptor("plus", "audio"),
-  [MethodId.SUM_AUDIO]: methodDescriptor("sum"),
+  [MethodId.SLICE_SOUND]: {
+    _: overloadDescription("slice sound", "start time", "duration")
+  },
+  [MethodId.IS_PLAYING]: {
+    _: overloadDescription("is playing?")
+  },
+  [MethodId.ADD_AUDIO]: {
+    _: overloadDescription("plus", "audio")
+  },
+  [MethodId.SUM_AUDIO]: {
+    _: overloadDescription("sum")
+  },
 
-  [MethodId.LOCAL_STORAGE]: methodDescriptor("on update, save", "key", "load!", "active?"),
-  [MethodId.DEBUG_PRINT]: methodDescriptor("print to debug console", "prefix", "active?"),
-  [MethodId.DEBUG_PAUSE]: methodDescriptor("breakpoint", "active?"),
+  [MethodId.LOCAL_STORAGE]: {
+    _: overloadDescription("on update, save", "key", "load!", "active?")
+  },
+  [MethodId.DEBUG_PRINT]: {
+    _: overloadDescription("print to debug console", "prefix", "active?")
+  },
+  [MethodId.DEBUG_PAUSE]: {
+    _: overloadDescription("breakpoint", "active?")
+  },
 
-  [MethodId.SATELLITE]: methodDescriptor("satellite", "type"),
-  [MethodId.SEND]: methodDescriptor("send", "message", "count"),
-  [MethodId.RECEIVE]: methodDescriptor("receive messages", "empty?", "asap"),
+  [MethodId.SATELLITE]: {
+    _: overloadDescription("satellite", "type")
+  },
+  [MethodId.SEND]: {
+    _: overloadDescription("send", "message", "count")
+  },
+  [MethodId.RECEIVE]: {
+    _: overloadDescription("receive messages", "empty?", "asap")
+  },
 
-  [MethodId.TUPLE_2]: methodDescriptor("couple", "element 0", "element 1", "https://en.wikipedia.org/wiki/Tuple"),
-  [MethodId.TUPLE_3]: methodDescriptor("triple", "element 0", "element 1", "element 2", "https://en.wikipedia.org/wiki/Tuple"),
-  [MethodId.TUPLE_4]: methodDescriptor("quadruple", "element 0", "element 1", "element 2", "element 3", "https://en.wikipedia.org/wiki/Tuple"),
+  [MethodId.TUPLE_2]: {
+    _: overloadDescription("couple", "element 0", "element 1", "https://en.wikipedia.org/wiki/Tuple")
+  },
+  [MethodId.TUPLE_3]: {
+    _: overloadDescription("triple", "element 0", "element 1", "element 2", "https://en.wikipedia.org/wiki/Tuple")
+  },
+  [MethodId.TUPLE_4]: {
+    _: overloadDescription("quadruple", "element 0", "element 1", "element 2", "element 3", "https://en.wikipedia.org/wiki/Tuple")
+  },
 
-  [MethodId.GET_ELEMENT_0]: methodDescriptor("get element 0", "https://en.wikipedia.org/wiki/Tuple"),
-  [MethodId.GET_ELEMENT_1]: methodDescriptor("get element 1", "https://en.wikipedia.org/wiki/Tuple"),
-  [MethodId.GET_ELEMENT_2]: methodDescriptor("get element 2", "https://en.wikipedia.org/wiki/Tuple"),
-  [MethodId.GET_ELEMENT_3]: methodDescriptor("get element 3", "https://en.wikipedia.org/wiki/Tuple"),
+  [MethodId.GET_ELEMENT_0]: {
+    _: overloadDescription("get element 0", "https://en.wikipedia.org/wiki/Tuple")
+  },
+  [MethodId.GET_ELEMENT_1]: {
+    _: overloadDescription("get element 1", "https://en.wikipedia.org/wiki/Tuple")
+  },
+  [MethodId.GET_ELEMENT_2]: {
+    _: overloadDescription("get element 2", "https://en.wikipedia.org/wiki/Tuple")
+  },
+  [MethodId.GET_ELEMENT_3]: {
+    _: overloadDescription("get element 3", "https://en.wikipedia.org/wiki/Tuple")
+  },
 
   [MethodId.TO_LIST]: {
-    "∀α ∀κ ∈ ℝ∪𝕊: ⧼ κ ↦ α ⧽": overloadDescriptor("get all elements", "ordering"),
-    "∀κ ∈ ℝ∪𝕊: {κ}": overloadDescriptor("get all elements", "ordering"),
-    _: overloadDescriptor("get all elements", "https://en.wikipedia.org/wiki/Tuple"),
+    "∀α ∀κ ∈ ℝ∪𝕊: ⧼ κ ↦ α ⧽": overloadDescription("get all elements", "ordering"),
+    "∀κ ∈ ℝ∪𝕊: {κ}": overloadDescription("get all elements", "ordering"),
+    _: overloadDescription("get all elements", "https://en.wikipedia.org/wiki/Tuple"),
   },
 
-  [MethodId.WITH_ELEMENT_0]: methodDescriptor("replace element 0", "new element", "https://en.wikipedia.org/wiki/Tuple"),
-  [MethodId.WITH_ELEMENT_1]: methodDescriptor("replace element 1", "new element", "https://en.wikipedia.org/wiki/Tuple"),
-  [MethodId.WITH_ELEMENT_2]: methodDescriptor("replace element 2", "new element", "https://en.wikipedia.org/wiki/Tuple"),
-  [MethodId.WITH_ELEMENT_3]: methodDescriptor("replace element 3", "new element", "https://en.wikipedia.org/wiki/Tuple"),
+  [MethodId.WITH_ELEMENT_0]: {
+    _: overloadDescription("replace element 0", "new element", "https://en.wikipedia.org/wiki/Tuple")
+  },
+  [MethodId.WITH_ELEMENT_1]: {
+    _: overloadDescription("replace element 1", "new element", "https://en.wikipedia.org/wiki/Tuple")
+  },
+  [MethodId.WITH_ELEMENT_2]: {
+    _: overloadDescription("replace element 2", "new element", "https://en.wikipedia.org/wiki/Tuple")
+  },
+  [MethodId.WITH_ELEMENT_3]: {
+    _: overloadDescription("replace element 3", "new element", "https://en.wikipedia.org/wiki/Tuple")
+  },
 
-  [MethodId.SET_UNION]: methodDescriptor("union with", "set", "https://en.wikipedia.org/wiki/Union_(set_theory)"),
-  [MethodId.SET_INTERSECTION]: methodDescriptor("intersection with", "set", "https://en.wikipedia.org/wiki/Intersection_(set_theory)"),
-  [MethodId.SET_DIFFERENCE]: methodDescriptor("difference with", "set", "https://en.wikipedia.org/wiki/Complement_(set_theory)#Relative_complement"),
-  [MethodId.SET_SYMMETRIC_DIFFERENCE]: methodDescriptor("symmetric difference with", "set", "https://en.wikipedia.org/wiki/Symmetric_difference"),
+  [MethodId.SET_UNION]: {
+    _: overloadDescription("union with", "set", "https://en.wikipedia.org/wiki/Union_(set_theory)")
+  },
+  [MethodId.SET_INTERSECTION]: {
+    _: overloadDescription("intersection with", "set", "https://en.wikipedia.org/wiki/Intersection_(set_theory)")
+  },
+  [MethodId.SET_DIFFERENCE]: {
+    _: overloadDescription("difference with", "set", "https://en.wikipedia.org/wiki/Complement_(set_theory)#Relative_complement")
+  },
+  [MethodId.SET_SYMMETRIC_DIFFERENCE]: {
+    _: overloadDescription("symmetric difference with", "set", "https://en.wikipedia.org/wiki/Symmetric_difference")
+  },
 });
