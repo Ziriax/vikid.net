@@ -8,4 +8,3 @@ export type ValueDescription = typeof values;
 export type Translations = typeof en;
 
 export type TranslationKey = keyof Translations;
-

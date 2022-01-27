@@ -340,7 +340,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("hits?", "with label", "without label", "active?", "maximum depth")
   },
   [MethodId.RAY_CAST]: {
-    _: overloadDescription("data type", "with label", "without label", "active?")
+    _: overloadDescription("hit query", "data type", "with label", "without label", "active?")
   },
   [MethodId.HIT_REGION]: {
     _: overloadDescription("hit region", "label", "data")
@@ -519,6 +519,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("append", "element", "https://en.wikipedia.org/wiki/Array_data_structure")
   },
   [MethodId.INSERT]: {
+    "∀κ ∈ ℝ∪𝕊: {κ}": overloadDescription("insert", "set", "https://en.wikipedia.org/wiki/Set_(mathematics)"),
     _: overloadDescription("insert", "index or indices", "element(s)", "https://en.wikipedia.org/wiki/Array_data_structure")
   },
   [MethodId.CONCAT]: {
@@ -528,13 +529,15 @@ export const methods = methodDescriptions({
     _: overloadDescription("sliced", "index", "count", "https://en.wikipedia.org/wiki/Array_data_structure")
   },
   [MethodId.REMOVE]: {
-    _: overloadDescription("removed", "index", "count", "https://en.wikipedia.org/wiki/Array_data_structure")
+    "∀α ∀κ ∈ ℝ∪𝕊: ⧼ κ ↦ α ⧽": overloadDescription("remove", "key", "https://en.wikipedia.org/wiki/Associative_array"),
+    "∀κ ∈ ℝ∪𝕊: {κ}": overloadDescription("remove", "key", "https://en.wikipedia.org/wiki/Set_(mathematics)"),
+    _: overloadDescription("remove", "index", "count", "https://en.wikipedia.org/wiki/Array_data_structure")
   },
   [MethodId.LENGTH]: {
     _: overloadDescription("element count", "https://en.wikipedia.org/wiki/Array_data_structure")
   },
   [MethodId.ITEM]: {
-    _: overloadDescription("index or indices or conditions", "https://en.wikipedia.org/wiki/Array_data_structure")
+    _: overloadDescription("get element(s) at", "index or indices or conditions", "https://en.wikipedia.org/wiki/Array_data_structure")
   },
   [MethodId.SEARCH]: {
     _: overloadDescription("indices of", "element(s)", "https://en.wikipedia.org/wiki/Array_data_structure")
@@ -596,7 +599,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("join text", "separator")
   },
   [MethodId.FORMAT]: {
-    _: overloadDescription("format to text", "format")
+    _: overloadDescription("format to text", "format", "indent")
   },
   [MethodId.PARSE]: {
     _: overloadDescription("parse from text", "formaat", "type")
@@ -702,24 +705,22 @@ export const methods = methodDescriptions({
   },
 
   [MethodId.TO_LIST]: {
-    _: overloadDescription("get all elements", "https://en.wikipedia.org/wiki/Tuple")
+    "∀α ∀κ ∈ ℝ∪𝕊: ⧼ κ ↦ α ⧽": overloadDescription("get all elements", "ordering"),
+    "∀κ ∈ ℝ∪𝕊: {κ}": overloadDescription("get all elements", "ordering"),
+    _: overloadDescription("get all elements", "https://en.wikipedia.org/wiki/Tuple"),
   },
 
   [MethodId.WITH_ELEMENT_0]: {
-    _: overloadDescription("replace element 0", "https://en.wikipedia.org/wiki/Tuple")
+    _: overloadDescription("replace element 0", "new element", "https://en.wikipedia.org/wiki/Tuple")
   },
   [MethodId.WITH_ELEMENT_1]: {
-    _: overloadDescription("replace element 1", "https://en.wikipedia.org/wiki/Tuple")
+    _: overloadDescription("replace element 1", "new element", "https://en.wikipedia.org/wiki/Tuple")
   },
   [MethodId.WITH_ELEMENT_2]: {
-    _: overloadDescription("replace element 2", "https://en.wikipedia.org/wiki/Tuple")
+    _: overloadDescription("replace element 2", "new element", "https://en.wikipedia.org/wiki/Tuple")
   },
   [MethodId.WITH_ELEMENT_3]: {
-    _: overloadDescription("replace element 3", "https://en.wikipedia.org/wiki/Tuple")
-  },
-
-  [MethodId.WITH_ELEMENT_3]: {
-    _: overloadDescription("replace element 3", "https://en.wikipedia.org/wiki/Tuple")
+    _: overloadDescription("replace element 3", "new element", "https://en.wikipedia.org/wiki/Tuple")
   },
 
   [MethodId.SET_UNION]: {

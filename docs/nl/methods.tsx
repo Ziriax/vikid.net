@@ -185,7 +185,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("sla eerste updates over", "aantal", "http://reactivex.io/documentation/operators/skip.html")
   },
   [MethodId.BUFFER]: {
-    _: overloadDescription("buffer updates", "hoeveel [@<0 ⇒ aantal=-@ | @>0 ⇒ tijdspanne=@seconden], vertraagd?, actief?", "http://reactivex.io/documentation/operators/buffer.html")
+    _: overloadDescription("buffer updates", "hoeveel [@<0 ⇒ aantal=-@ | @>0 ⇒ tijdspanne=@seconden]", "vertraagd?", "actief?", "http://reactivex.io/documentation/operators/buffer.html")
   },
   [MethodId.FILTER]: {
     _: overloadDescription("filter updates", "doorlaten?", "http://reactivex.io/documentation/operators/filter.html")
@@ -348,7 +348,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("raakt?", "met label", "zonder label", "actief?", "maximum diepte")
   },
   [MethodId.RAY_CAST]: {
-    _: overloadDescription("data type", "met label", "zonder label", "actief?")
+    _: overloadDescription("aangeraakt", "data type", "met label", "zonder label", "actief?")
   },
   [MethodId.HIT_REGION]: {
     _: overloadDescription("aanraakbaar", "label", "waarde")
@@ -519,7 +519,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("lege verzameling", "type", "https://nl.wikipedia.org/wiki/Verzameling_(wiskunde)")
   },
   [MethodId.EMPTY_MAP]: {
-    _: overloadDescription("lege map [associatieve array]", "type", "https://nl.wikipedia.org/wiki/Associatieve_array")
+    _: overloadDescription("lege map [associatieve array]", "type sleutel", "type waarde", "https://nl.wikipedia.org/wiki/Associatieve_array")
   },
 
   /** List methods */
@@ -527,6 +527,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("toegevoegd", "element", "https://nl.wikipedia.org/wiki/Array")
   },
   [MethodId.INSERT]: {
+    "∀κ ∈ ℝ∪𝕊: {κ}": overloadDescription("ingevoegd", "verzameling", "https://nl.wikipedia.org/wiki/Verzameling_(wiskunde)"),
     _: overloadDescription("ingevoegd", "index of indices", "element(en)", "https://nl.wikipedia.org/wiki/Array")
   },
   [MethodId.CONCAT]: {
@@ -536,13 +537,15 @@ export const methods = methodDescriptions({
     _: overloadDescription("uitgesneden", "index", "aantal", "https://nl.wikipedia.org/wiki/Array")
   },
   [MethodId.REMOVE]: {
-    _: overloadDescription("verwijderd", "index", "count", "https://nl.wikipedia.org/wiki/Array")
+    "∀α ∀κ ∈ ℝ∪𝕊: ⧼ κ ↦ α ⧽": overloadDescription("verwijder", "sleutel", "https://nl.wikipedia.org/wiki/Associatieve_array"),
+    "∀κ ∈ ℝ∪𝕊: {κ}": overloadDescription("verwijder", "sleutel", "https://nl.wikipedia.org/wiki/Verzameling_(wiskunde)"),
+    _: overloadDescription("verwijder", "index", "count", "https://nl.wikipedia.org/wiki/Array")
   },
   [MethodId.LENGTH]: {
     _: overloadDescription("aantal elementen", "https://nl.wikipedia.org/wiki/Array")
   },
   [MethodId.ITEM]: {
-    _: overloadDescription("index of indices of condities", "https://nl.wikipedia.org/wiki/Array")
+    _: overloadDescription("neem element(en)", "index of indices of condities", "https://nl.wikipedia.org/wiki/Array")
   },
   [MethodId.SEARCH]: {
     _: overloadDescription("indices van", "element(en)", "https://nl.wikipedia.org/wiki/Array")
@@ -605,7 +608,7 @@ export const methods = methodDescriptions({
     _: overloadDescription("samengevoegd", "scheidingsteken")
   },
   [MethodId.FORMAT]: {
-    _: overloadDescription("formatteer naar tekst", "formaat")
+    _: overloadDescription("formatteer naar tekst", "formaat", "indentatie")
   },
   [MethodId.PARSE]: {
     _: overloadDescription("ontleed tekst", "formaat", "type")
@@ -715,20 +718,22 @@ export const methods = methodDescriptions({
   },
 
   [MethodId.TO_LIST]: {
-    _: overloadDescription("neem alle elementen", "https://nl.wikipedia.org/wiki/Koppel_(wiskunde)")
+    "∀α ∀κ ∈ ℝ∪𝕊: ⧼ κ ↦ α ⧽": overloadDescription("neem alle elementen", "sortering"),
+    "∀κ ∈ ℝ∪𝕊: {κ}": overloadDescription("neem alle elementen", "sortering"),
+    _: overloadDescription("neem alle elementen", "https://nl.wikipedia.org/wiki/Koppel_(wiskunde)"),
   },
 
   [MethodId.WITH_ELEMENT_0]: {
-    _: overloadDescription("vervang element 0", "https://nl.wikipedia.org/wiki/Koppel_(wiskunde)")
+    _: overloadDescription("vervang element 0", "nieuw element", "https://nl.wikipedia.org/wiki/Koppel_(wiskunde)")
   },
   [MethodId.WITH_ELEMENT_1]: {
-    _: overloadDescription("vervang element 1", "https://nl.wikipedia.org/wiki/Koppel_(wiskunde)")
+    _: overloadDescription("vervang element 1", "nieuw element", "https://nl.wikipedia.org/wiki/Koppel_(wiskunde)")
   },
   [MethodId.WITH_ELEMENT_2]: {
-    _: overloadDescription("vervang element 2", "https://nl.wikipedia.org/wiki/Koppel_(wiskunde)")
+    _: overloadDescription("vervang element 2", "nieuw element", "https://nl.wikipedia.org/wiki/Koppel_(wiskunde)")
   },
   [MethodId.WITH_ELEMENT_3]: {
-    _: overloadDescription("vervang element 3", "https://nl.wikipedia.org/wiki/Koppel_(wiskunde)")
+    _: overloadDescription("vervang element 3", "nieuw element", "https://nl.wikipedia.org/wiki/Koppel_(wiskunde)")
   },
 
   [MethodId.SET_UNION]: {
