@@ -250,7 +250,11 @@ export const methods = methodDescriptions({
   [MethodId.INSERT]: methodDescriptor("insert", "index or indices", "element(s)", "https://en.wikipedia.org/wiki/Array_data_structure"),
   [MethodId.CONCAT]: methodDescriptor("concatenate", "elements", "https://en.wikipedia.org/wiki/Array_data_structure"),
   [MethodId.SLICE]: methodDescriptor("sliced", "index", "count", "https://en.wikipedia.org/wiki/Array_data_structure"),
-  [MethodId.REMOVE]: methodDescriptor("removed", "index", "count", "https://en.wikipedia.org/wiki/Array_data_structure"),
+  [MethodId.REMOVE]: {
+    "∀α ∀κ ∈ ℝ∪𝕊: ⧼ κ ↦ α ⧽": overloadDescriptor("remove", "key", "https://en.wikipedia.org/wiki/Associative_array"),
+    "∀κ ∈ ℝ∪𝕊: {κ}": overloadDescriptor("remove", "key", "https://en.wikipedia.org/wiki/Set_(mathematics)"),
+    _: overloadDescriptor("remove", "index", "count", "https://en.wikipedia.org/wiki/Array_data_structure")
+  },
   [MethodId.LENGTH]: methodDescriptor("element count", "https://en.wikipedia.org/wiki/Array_data_structure"),
   [MethodId.ITEM]: methodDescriptor("element(s) at", "index or indices or conditions", "wrap?", "https://en.wikipedia.org/wiki/Array_data_structure"),
   [MethodId.SEARCH]: methodDescriptor("indices of", "element(s)", "https://en.wikipedia.org/wiki/Array_data_structure"),
@@ -278,7 +282,7 @@ export const methods = methodDescriptions({
 
   [MethodId.CASE]: methodDescriptor("letter case", "mode [@<0 ⇒ lowercase | @>0 ⇒ uppercase]", "https://en.wikipedia.org/wiki/Letter_case"),
   [MethodId.JOIN]: methodDescriptor("join text", "separator"),
-  [MethodId.FORMAT]: methodDescriptor("format to text", "format"),
+  [MethodId.FORMAT]: methodDescriptor("format to text", "format", "indent"),
   [MethodId.PARSE]: methodDescriptor("parse from text", "formaat", "type"),
   [MethodId.PROMPT]: methodDescriptor("ask the user for text input", "default input", "open!"),
   [MethodId.ALERT]: methodDescriptor("notify the user", "open!"),
@@ -320,14 +324,16 @@ export const methods = methodDescriptions({
   [MethodId.GET_ELEMENT_2]: methodDescriptor("get element 2", "https://en.wikipedia.org/wiki/Tuple"),
   [MethodId.GET_ELEMENT_3]: methodDescriptor("get element 3", "https://en.wikipedia.org/wiki/Tuple"),
 
-  [MethodId.TO_LIST]: methodDescriptor("get all elements", "https://en.wikipedia.org/wiki/Tuple"),
+  [MethodId.TO_LIST]: {
+    "∀α ∀κ ∈ ℝ∪𝕊: ⧼ κ ↦ α ⧽": overloadDescriptor("get all elements", "ordering"),
+    "∀κ ∈ ℝ∪𝕊: {κ}": overloadDescriptor("get all elements", "ordering"),
+    _: overloadDescriptor("get all elements", "https://en.wikipedia.org/wiki/Tuple"),
+  },
 
-  [MethodId.WITH_ELEMENT_0]: methodDescriptor("replace element 0", "https://en.wikipedia.org/wiki/Tuple"),
-  [MethodId.WITH_ELEMENT_1]: methodDescriptor("replace element 1", "https://en.wikipedia.org/wiki/Tuple"),
-  [MethodId.WITH_ELEMENT_2]: methodDescriptor("replace element 2", "https://en.wikipedia.org/wiki/Tuple"),
-  [MethodId.WITH_ELEMENT_3]: methodDescriptor("replace element 3", "https://en.wikipedia.org/wiki/Tuple"),
-
-  [MethodId.WITH_ELEMENT_3]: methodDescriptor("replace element 3", "https://en.wikipedia.org/wiki/Tuple"),
+  [MethodId.WITH_ELEMENT_0]: methodDescriptor("replace element 0", "new element", "https://en.wikipedia.org/wiki/Tuple"),
+  [MethodId.WITH_ELEMENT_1]: methodDescriptor("replace element 1", "new element", "https://en.wikipedia.org/wiki/Tuple"),
+  [MethodId.WITH_ELEMENT_2]: methodDescriptor("replace element 2", "new element", "https://en.wikipedia.org/wiki/Tuple"),
+  [MethodId.WITH_ELEMENT_3]: methodDescriptor("replace element 3", "new element", "https://en.wikipedia.org/wiki/Tuple"),
 
   [MethodId.SET_UNION]: methodDescriptor("union with", "set", "https://en.wikipedia.org/wiki/Union_(set_theory)"),
   [MethodId.SET_INTERSECTION]: methodDescriptor("intersection with", "set", "https://en.wikipedia.org/wiki/Intersection_(set_theory)"),

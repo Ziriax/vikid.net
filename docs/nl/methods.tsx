@@ -254,7 +254,11 @@ export const methods = methodDescriptions({
   [MethodId.INSERT]: methodDescriptor("ingevoegd", "index of indices", "element(en)", "https://nl.wikipedia.org/wiki/Array"),
   [MethodId.CONCAT]: methodDescriptor("samengevoegd", "elementen", "https://nl.wikipedia.org/wiki/Array"),
   [MethodId.SLICE]: methodDescriptor("uitgesneden", "index", "aantal", "https://nl.wikipedia.org/wiki/Array"),
-  [MethodId.REMOVE]: methodDescriptor("verwijderd", "index", "count", "https://nl.wikipedia.org/wiki/Array"),
+  [MethodId.REMOVE]: {
+    "∀α ∀κ ∈ ℝ∪𝕊: ⧼ κ ↦ α ⧽": overloadDescriptor("verwijder", "sleutel", "https://nl.wikipedia.org/wiki/Associatieve_array"),
+    "∀κ ∈ ℝ∪𝕊: {κ}": overloadDescriptor("verwijder", "sleutel", "https://nl.wikipedia.org/wiki/Verzameling_(wiskunde)"),
+    _: overloadDescriptor("verwijder", "index", "count", "https://nl.wikipedia.org/wiki/Array")
+  },
   [MethodId.LENGTH]: methodDescriptor("aantal elementen", "https://nl.wikipedia.org/wiki/Array"),
   [MethodId.ITEM]: methodDescriptor("element(en)", "index of indices of condities", "wrap?", "https://nl.wikipedia.org/wiki/Array"),
   [MethodId.SEARCH]: methodDescriptor("indices van", "element(en)", "https://nl.wikipedia.org/wiki/Array"),
@@ -283,7 +287,7 @@ export const methods = methodDescriptions({
 
   [MethodId.CASE]: methodDescriptor("letters", "mode [@<0 ⇒ kleine letters | @>0 ⇒ hoofdletters]", "https://nl.wikipedia.org/wiki/Onderkast"),
   [MethodId.JOIN]: methodDescriptor("samengevoegd", "scheidingsteken"),
-  [MethodId.FORMAT]: methodDescriptor("formatteer naar tekst", "formaat"),
+  [MethodId.FORMAT]: methodDescriptor("formatteer naar tekst", "formaat", "indentatie"),
   [MethodId.PARSE]: methodDescriptor("ontleed tekst", "formaat", "type"),
   [MethodId.PROMPT]: methodDescriptor("vraag de gebruiker om tekst in te voeren", "standaard invoer", "open!"),
   [MethodId.ALERT]: methodDescriptor("waarschuw de gebruiker", "open!"),
@@ -327,12 +331,16 @@ export const methods = methodDescriptions({
   [MethodId.GET_ELEMENT_2]: methodDescriptor("neem element 2", "https://nl.wikipedia.org/wiki/Koppel_(wiskunde)"),
   [MethodId.GET_ELEMENT_3]: methodDescriptor("neem element 3", "https://nl.wikipedia.org/wiki/Koppel_(wiskunde)"),
 
-  [MethodId.TO_LIST]: methodDescriptor("neem alle elementen", "https://nl.wikipedia.org/wiki/Koppel_(wiskunde)"),
+  [MethodId.TO_LIST]: {
+    "∀α ∀κ ∈ ℝ∪𝕊: ⧼ κ ↦ α ⧽": overloadDescriptor("neem alle elementen", "sortering"),
+    "∀κ ∈ ℝ∪𝕊: {κ}": overloadDescriptor("neem alle elementen", "sortering"),
+    _: overloadDescriptor("neem alle elementen", "https://nl.wikipedia.org/wiki/Koppel_(wiskunde)"),
+  },
 
-  [MethodId.WITH_ELEMENT_0]: methodDescriptor("vervang element 0", "https://nl.wikipedia.org/wiki/Koppel_(wiskunde)"),
-  [MethodId.WITH_ELEMENT_1]: methodDescriptor("vervang element 1", "https://nl.wikipedia.org/wiki/Koppel_(wiskunde)"),
-  [MethodId.WITH_ELEMENT_2]: methodDescriptor("vervang element 2", "https://nl.wikipedia.org/wiki/Koppel_(wiskunde)"),
-  [MethodId.WITH_ELEMENT_3]: methodDescriptor("vervang element 3", "https://nl.wikipedia.org/wiki/Koppel_(wiskunde)"),
+  [MethodId.WITH_ELEMENT_0]: methodDescriptor("vervang element 0", "nieuw element", "https://nl.wikipedia.org/wiki/Koppel_(wiskunde)"),
+  [MethodId.WITH_ELEMENT_1]: methodDescriptor("vervang element 1", "nieuw element", "https://nl.wikipedia.org/wiki/Koppel_(wiskunde)"),
+  [MethodId.WITH_ELEMENT_2]: methodDescriptor("vervang element 2", "nieuw element", "https://nl.wikipedia.org/wiki/Koppel_(wiskunde)"),
+  [MethodId.WITH_ELEMENT_3]: methodDescriptor("vervang element 3", "nieuw element", "https://nl.wikipedia.org/wiki/Koppel_(wiskunde)"),
 
   [MethodId.SET_UNION]: methodDescriptor("unie met", "verzameling", "https://nl.wikipedia.org/wiki/Vereniging_(verzamelingenleer)"),
   [MethodId.SET_INTERSECTION]: methodDescriptor("doorsnede met", "verzameling", "https://nl.wikipedia.org/wiki/Doorsnede_(verzamelingenleer)"),
