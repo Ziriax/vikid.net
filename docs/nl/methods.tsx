@@ -245,11 +245,11 @@ export const methods = methodDescriptions({
   [MethodId.PAINT_LINEAR]: {
     _: overloadDescription("geverfd in", "start kleur", "eind kleur", "start punt", "eind punt")
   },
-  [MethodId.OVERLAY]: {
+  [MethodId.OVER]: {
     "[𝔾]": overloadDescription("op elkaar gestapeld"),
     _: overloadDescription("over", "vorm"),
   },
-  [MethodId.UNDERLAY]: {
+  [MethodId.UNDER]: {
     "[𝔾]": overloadDescription("onder elkaar gestapeld"),
     _: overloadDescription("onder", "vorm"),
   },

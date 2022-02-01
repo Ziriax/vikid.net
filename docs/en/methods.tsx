@@ -238,11 +238,11 @@ export const methods = methodDescriptions({
   [MethodId.PAINT_LINEAR]: {
     _: overloadDescription("painted", "start color", "end color", "start point", "end point")
   },
-  [MethodId.OVERLAY]: {
+  [MethodId.OVER]: {
     "[𝔾]": overloadDescription("stacked on top of each other"),
     _: overloadDescription("in front of", "graphic"),
   },
-  [MethodId.UNDERLAY]: {
+  [MethodId.UNDER]: {
     "[𝔾]": overloadDescription("stacked one below the other"),
     _: overloadDescription("behind", "graphic"),
   },
