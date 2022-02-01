@@ -281,6 +281,7 @@ export const nl: Translations = {
   missing_file: "😕 Dit bestand lijkt niet te bestaan",
   invalid_clipboard: "😕 De gegevens in het klembord worden niet ondersteund",
   paste_not_allowed: "😕 De gegevens in het clipboard kunnen hier niet geplakt worden",
+  invalid_script: "😕 Ongeldige script tekst",
 
   split_formula: "Splits de formule in twee delen",
   swap_arguments: "Wissel de functie parameters van plaats",

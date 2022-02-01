@@ -282,6 +282,7 @@ export const en = {
   missing_file: "😕 This file does not seem to exist",
   invalid_clipboard: "😕 The data in the clipboard is not supported",
   paste_not_allowed: "😕 The data in the clipboard cannot be pasted here",
+  invalid_script: "😕 Invalid script text",
 
   split_formula: "Split the formula into two parts",
   swap_arguments: "Swap the function parameters",
