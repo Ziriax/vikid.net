@@ -8,7 +8,7 @@
 
 # Description
 __Numeric addition__
-- as soon as both `value` and `input` are initialized, the `output` becomes `value` + `input`.
+- as soon as both `input` and `value` are initialized, the `output` becomes `input` + `value`.
 - when `input` or `value` updates, the `output` sum is updated.
 - [more...](https://en.wikipedia.org/wiki/Addition)
 
